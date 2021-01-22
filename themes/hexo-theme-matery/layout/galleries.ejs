@@ -1,0 +1,109 @@
+<!-- 加密功能 -->
+<% if (theme.PhotoVerifyPassword.enable) { %>
+<script src="<%- theme.libs.js.crypto %>"></script>
+<script>
+    (function () {
+        let pwd = '<%- page.password %>';
+
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('<%- theme.PhotoVerifyPassword.promptMessage %>')).toString(CryptoJS.enc.Hex)) {
+                alert('<%- theme.PhotoVerifyPassword.errorMessage %>');
+                location.href = '<%- url_for("/")  %>';
+            }
+        }
+    })();
+</script>
+<% } %>
+
+<%- partial('_partial/bg-cover') %>
+
+<link rel="stylesheet" href="https://github.com/liang996/liang996.github.io/blob/liang/baguetteBox.css">
+<!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
+<script src="https://github.com/liang996/liang996.github.io/blob/liang/baguetteBox.js"></script>
+<style>
+    .my-gallery .photo img {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .my-gallery .photo:hover img {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+</style>
+
+<main class="content">
+    <div class="container chip-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <i class="<%- theme.gallery.icon2 %>"></i>
+                    &nbsp;&nbsp;<%- page.title %>
+                </div>
+
+                <!-- 相册 -->
+                <section class="gallery">
+                    <div id="myGallery" class="my-gallery">
+                        <div class="row">
+                            <% if (site.data && site.data.gallery) { %>
+                            <% var galleries = site.data.gallery; 
+                                            var pageTitle = page.title;
+                                            function getCurrentGallery(galleries, pageTitle) {
+                                                for (let i = 0; i < galleries.length; i++) {
+                                                    if (galleries[i]['name'] == pageTitle) {
+                                                        return galleries[i];
+                                                    }
+                                                }
+                                            }
+                                            var currentGallery = getCurrentGallery(galleries, pageTitle);
+                                            var photos = currentGallery.album;
+                                        %>
+                            <% for (var i = 0, len = photos.length; i < len; i++) { %>
+                            <% var my_album = photos[i]; %>
+                            <div class="photo col s12 m6 l4" data-aos="fade-up">
+                                <a href="<%- my_album.img_url %>" data-caption="<%- my_album.title %>">
+                                    <img class="mat" src="/medias/loading.svg" data-src="<%- my_album.img_url %>"
+                                        alt="img" +<%- i %>>
+                                </a>
+                            </div>
+                            <% } %>
+                            <% } %>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        start()
+        $(window).on('scroll', function () {
+            start();
+        })
+
+        function start() {
+            //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
+            $('.container img').not('[data-isLoaded]').each(function () {
+                var $node = $(this)
+                if (isShow($node)) {
+                    loadImg($node);
+                }
+            });
+        }
+
+        //判断一个元素是不是出现在窗口(视野)
+        function isShow($node) {
+            return $node.offset().top <= $(window).height() + $(window).scrollTop();
+        }
+        //加载图片
+        function loadImg($img) {
+            //.attr(值)
+            //.attr(属性名称,值)
+            $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
+            $img.attr('data-isLoaded', 1);//已加载的图片做标记
+        }
+
+    </script>
+
+</main>
