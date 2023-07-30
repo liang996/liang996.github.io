@@ -1,0 +1,2185 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="ReactNactive开发项目总结二, HTML,CSS,JavaScript,React,node">
+    <meta name="description" content="专注于Web知识积累，热爱于每一份生活耕耘">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>ReactNactive开发项目总结二 | 灯@塔</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="灯@塔" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+    
+
+                <body>
+                    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">灯@塔</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/gallery" class="waves-effect waves-light">
+      
+      <span>我的相册</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+  <div class="mobile-head bg-color">
+    
+    <img src="/medias/logo.png" class="logo-img circle responsive-img">
+    
+    <div class="logo-name">灯@塔</div>
+    <div class="logo-desc">
+      
+      专注于Web知识积累，热爱于每一份生活耕耘
+      
+    </div>
+  </div>
+
+  
+
+  <ul class="menu-list mobile-menu-list">
+    
+    <li class="m-nav-item">
+      
+      <a href="/" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-home"></i>
+        
+        首页
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/tags" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-tags"></i>
+        
+        标签
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/categories" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-bookmark"></i>
+        
+        分类
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/archives" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-archive"></i>
+        
+        归档
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/about" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-user-circle"></i>
+        
+        关于
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/contact" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-comments"></i>
+        
+        留言板
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/friends" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-address-book"></i>
+        
+        友情链接
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/gallery" class="waves-effect waves-light">
+        
+        <i class="fas fa-fw fa-link"></i>
+        
+        我的相册
+      </a>
+      
+        </li>
+        
+        
+        <li><div class=" divider">
+</div>
+</li>
+<li>
+  <a href="https://github.com/liang996" class="waves-effect waves-light" target="_blank">
+    <i class="fab fa-github-square fa-fw"></i>Fork Me
+  </a>
+</li>
+
+</ul>
+</div>
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/liang996" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+                        
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">ReactNactive开发项目总结二</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ReactNative/">
+                                <span class="chip bg-color">ReactNative</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/ReactNative/" class="post-category">
+                                ReactNative
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-02-26
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-03-01
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    16 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>由于最近开发了几个React-Nactive开发项目，开发中遇到的问题及解决方案供学习参考，如果有不足之处请多指教！</p>
+<h2 id="【Android-ios】播放声音组件"><a href="#【Android-ios】播放声音组件" class="headerlink" title="【Android/ios】播放声音组件"></a>【Android/ios】播放声音组件</h2><p><a target="_blank" rel="noopener" href="https://github.com/expo/expo/tree/master/packages/expo-av">https://github.com/expo/expo/tree/master/packages/expo-av</a></p>
+<h1 id="expo-av"><a href="#expo-av" class="headerlink" title="expo-av"></a>expo-av</h1><p>Expo universal module for Audio and Video playback</p>
+<h1 id="API-documentation"><a href="#API-documentation" class="headerlink" title="API documentation"></a>API documentation</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/expo/expo/blob/master/docs/pages/versions/unversioned/sdk/av.md">Documentation for the master branch</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.expo.io/versions/latest/sdk/av/">Documentation for the latest stable release</a></li>
+</ul>
+<h1 id="Installation-in-managed-Expo-projects"><a href="#Installation-in-managed-Expo-projects" class="headerlink" title="Installation in managed Expo projects"></a>Installation in managed Expo projects</h1><p>For managed <a target="_blank" rel="noopener" href="https://docs.expo.io/versions/latest/introduction/managed-vs-bare/">managed</a> Expo projects, please follow the installation instructions in the <a target="_blank" rel="noopener" href="https://docs.expo.io/versions/latest/sdk/av/">API documentation for the latest stable release</a>.</p>
+<h1 id="Installation-in-bare-React-Native-projects"><a href="#Installation-in-bare-React-Native-projects" class="headerlink" title="Installation in bare React Native projects"></a>Installation in bare React Native projects</h1><p>For bare React Native projects, you must ensure that you have <a target="_blank" rel="noopener" href="https://github.com/expo/expo/tree/master/packages/react-native-unimodules">installed and configured the <code>react-native-unimodules</code> package</a> before continuing.</p>
+<h3 id="Add-the-package-to-your-npm-dependencies"><a href="#Add-the-package-to-your-npm-dependencies" class="headerlink" title="Add the package to your npm dependencies"></a>Add the package to your npm dependencies</h3><pre><code>expo install expo-av</code></pre>
+<h3 id="Configure-for-iOS"><a href="#Configure-for-iOS" class="headerlink" title="Configure for iOS"></a>Configure for iOS</h3><p>Add <code>NSMicrophoneUsageDescription</code> key to your <code>Info.plist</code>:</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>NSMicrophoneUsageDescription<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>Allow $(PRODUCT_NAME) to access your microphone<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span></code></pre>
+<p>Run <code>npx pod-install</code> after installing the npm package.</p>
+<h4 id="pod时报错："><a href="#pod时报错：" class="headerlink" title="pod时报错："></a>pod时报错：</h4><pre><code>[!] CocoaPods could not find compatible versions for pod "EXAV":
+  In Podfile:
+    EXAV (from `../node_modules/expo-av/ios`)
+
+Specs satisfying the `EXAV (from `../node_modules/expo-av/ios`)` dependency were found, but they required a higher minimum deployment target.</code></pre>
+<p>解决方法：<a target="_blank" rel="noopener" href="https://github.com/expo/expo/issues/11855">https://github.com/expo/expo/issues/11855</a><br>修改<code>ios &gt; Podfile</code> 将ios版本改成11</p>
+<pre><code>platform :ios, '11.0'
+</code></pre>
+<h4 id="安卓打包报错："><a href="#安卓打包报错：" class="headerlink" title="安卓打包报错："></a>安卓打包报错：</h4><pre><code>“A failure occurred while executing com.android.build.gradle.internal.tasks.Workers$ActionFacade”</code></pre>
+<p>解决方法参考：</p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/58084850/how-to-fix-this-error-a-failure-occurred-while-executing-com-android-build-grad">https://stackoverflow.com/questions/58084850/how-to-fix-this-error-a-failure-occurred-while-executing-com-android-build-grad</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/kaikevin01/article/details/78898918">https://blog.csdn.net/kaikevin01/article/details/78898918</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Jiang_Rong_Tao/article/details/102519914">https://blog.csdn.net/Jiang_Rong_Tao/article/details/102519914</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.gradle.org/current/userguide/build_environment.html#sec:configuring_jvm_memory">https://docs.gradle.org/current/userguide/build_environment.html#sec:configuring_jvm_memory</a></p>
+<ol>
+<li>将<code>android &gt; build.gradle</code>里的<pre><code>dependencies {
+     classpath("com.android.tools.build:gradle:3.5.3")
+ }</code></pre>
+替换为<pre><code>dependencies {
+     classpath("com.android.tools.build:gradle:3.4.1")
+ }</code></pre>
+</li>
+<li>增加<code>android &gt; gradle.properties</code><pre><code>org.gradle.daemon=true
+org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
+org.gradle.parallel=true
+org.gradle.configureondemand=true</code></pre>
+</li>
+</ol>
+<h3 id="Configure-for-Android"><a href="#Configure-for-Android" class="headerlink" title="Configure for Android"></a>Configure for Android</h3><p>Add <code>android.permission.RECORD_AUDIO</code> permission to your manifest (<code>android/app/src/main/AndroidManifest.xml</code>):</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>android.permission.RECORD_AUDIO<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<h1 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h1><p>Contributions are very welcome! Please refer to guidelines described in the <a target="_blank" rel="noopener" href="https://github.com/expo/expo#contributing">contributing guide</a>.</p>
+<h2 id="【iOS-Android】增加picker组件"><a href="#【iOS-Android】增加picker组件" class="headerlink" title="【iOS/Android】增加picker组件"></a>【iOS/Android】增加picker组件</h2><p><a target="_blank" rel="noopener" href="https://github.com/react-native-picker/picker">https://github.com/react-native-picker/picker</a></p>
+<h1 id="react-native-picker-picker"><a href="#react-native-picker-picker" class="headerlink" title="@react-native-picker/picker"></a><code>@react-native-picker/picker</code></h1><p><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@react-native-picker/picker"><img src="https://img.shields.io/npm/v/@react-native-picker/picker.svg" alt="npm version"></a><br><a target="_blank" rel="noopener" href="https://github.com/react-native-picker/picker/actions"><img src="https://github.com/react-native-picker/picker/workflows/Build/badge.svg" alt="Build"></a> <img src="https://img.shields.io/badge/platforms-android%20|%20ios|%20macos|%20windows-lightgrey.svg" alt="Supports Android, iOS, MacOS, and Windows"> <img src="https://img.shields.io/npm/l/@react-native-picker/picker.svg" alt="MIT License"> <a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/issues/23313"><img src="https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg" alt="Lean Core Extracted"></a></p>
+<table>
+<thead>
+<tr>
+<th>Android</th>
+<th>iOS</th>
+<th>PickerIOS</th>
+<th>Windows</th>
+<th>MacOS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="./screenshots/picker-android.png" width="150"></td>
+<td><img src="./screenshots/picker-ios.png" width="150"></td>
+<td><img src="./screenshots/pickerios-ios.png" width="150"></td>
+<td><img src="./screenshots/picker-windows.png" width="300"></td>
+<td><img src="./screenshots/picker-macos.png" width="300"></td>
+</tr>
+</tbody></table>
+<h2 id="Supported-Versions"><a href="#Supported-Versions" class="headerlink" title="Supported Versions"></a>Supported Versions</h2><table>
+<thead>
+<tr>
+<th>@react-native-picker/picker</th>
+<th>react-native</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&gt;= 1.2.0</td>
+<td>0.60+ or 0.59+ with <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/jetifier">Jetifier</a></td>
+</tr>
+<tr>
+<td>&gt;= 1.0.0</td>
+<td>0.57</td>
+</tr>
+</tbody></table>
+<h2 id="For-Managed-Workflow-users-using-Expo-37"><a href="#For-Managed-Workflow-users-using-Expo-37" class="headerlink" title="For Managed Workflow users using Expo 37"></a>For Managed Workflow users using Expo 37</h2><p>This component is not supported in the managed workflow for expo sdk 37. Please import the <code>Picker</code> from <code>react-native</code>.<br>See more info <a target="_blank" rel="noopener" href="https://github.com/react-native-picker/picker/issues/45#issuecomment-633163973">here</a></p>
+<h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><p><code>$ npm install @react-native-picker/picker --save</code></p>
+<p>or</p>
+<p><code>$ yarn add @react-native-picker/picker</code></p>
+<h3 id="For-114-x65-x61-99-116-45-x6e-97-116-105-118-101-64-48-46-x36-48-46-x30-or-above"><a href="#For-114-x65-x61-99-116-45-x6e-97-116-105-118-101-64-48-46-x36-48-46-x30-or-above" class="headerlink" title="For react-native@0.60.0 or above"></a>For <a href="mailto:react-native@0.60.0">react-native@0.60.0</a> or above</h3><p>As <a target="_blank" rel="noopener" href="https://reactnative.dev/blog/2019/07/03/version-60">react-native@0.60.0</a> or above supports autolinking, so there is no need to run linking process.<br>Read more about autolinking <a target="_blank" rel="noopener" href="https://github.com/react-native-picker/cli/blob/master/docs/autolinking.md">here</a>.</p>
+<h4 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h4><p>CocoaPods on iOS needs this extra step</p>
+<pre><code>npx pod-install</code></pre>
+<h4 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h4><p>No additional step is required.</p>
+<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><h5 id="Add-the-ReactNativePicker-project-to-your-solution"><a href="#Add-the-ReactNativePicker-project-to-your-solution" class="headerlink" title="Add the ReactNativePicker project to your solution."></a>Add the <code>ReactNativePicker</code> project to your solution.</h5><ol>
+<li>Open the solution in Visual Studio 2019</li>
+<li>Right-click Solution icon in Solution Explorer &gt; Add &gt; Existing Project<br>Select <code>D:\dev\RNTest\node_modules\@react-native-picker\picker\windows\ReactNativePicker\ReactNativePicker.vcxproj</code></li>
+</ol>
+<h5 id="windows-myapp-sln"><a href="#windows-myapp-sln" class="headerlink" title="windows/myapp.sln"></a><strong>windows/myapp.sln</strong></h5><p>Add a reference to <code>ReactNativePicker</code> to your main application project. From Visual Studio 2019:</p>
+<p>Right-click main application project &gt; Add &gt; Reference…<br>  Check <code>ReactNativePicker</code> from Solution Projects.</p>
+<h5 id="pch-h"><a href="#pch-h" class="headerlink" title="pch.h"></a><strong>pch.h</strong></h5><p>Add <code>#include "winrt/ReactNativePicker.h"</code>.</p>
+<h5 id="app-cpp"><a href="#app-cpp" class="headerlink" title="app.cpp"></a><strong>app.cpp</strong></h5><p>Add <code>PackageProviders().Append(winrt::ReactNativePicker::ReactPackageProvider());</code> before <code>InitializeComponent();</code>.</p>
+<h4 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h4><p>CocoaPods on MacOS needs this extra step (called from the MacOS directory)</p>
+<pre><code>pod install</code></pre>
+<h3 id="Mostly-automatic-installation-react-native-lt-0-60"><a href="#Mostly-automatic-installation-react-native-lt-0-60" class="headerlink" title="Mostly automatic installation (react-native < 0.60)"></a>Mostly automatic installation (react-native &lt; 0.60)</h3><p><code>$ react-native link @react-native-picker/picker</code></p>
+<h3 id="Manual-installation-react-native-lt-0-60"><a href="#Manual-installation-react-native-lt-0-60" class="headerlink" title="Manual installation (react-native < 0.60)"></a>Manual installation (react-native &lt; 0.60)</h3><h4 id="iOS-1"><a href="#iOS-1" class="headerlink" title="iOS"></a>iOS</h4><ol>
+<li>In XCode, in the project navigator, right click <code>Libraries</code> ➜ <code>Add Files to [your project's name]</code></li>
+<li>Go to <code>node_modules</code> ➜ <code> @react-native-picker/picker</code> and add <code>RNCPicker.xcodeproj</code></li>
+<li>In XCode, in the project navigator, select your project. Add <code>libRNCPicker.a</code> to your project’s <code>Build Phases</code> ➜ <code>Link Binary With Libraries</code></li>
+<li>Run your project (<code>Cmd+R</code>)&lt;</li>
+</ol>
+<h4 id="Android-1"><a href="#Android-1" class="headerlink" title="Android"></a>Android</h4><ol>
+<li><p>Open <strong>application</strong> file (<code>android/app/src/main/java/[...]/MainApplication.java</code>)</p>
+<ul>
+<li>Add <code>import com.reactnativecommunity.picker.RNCPickerPackage;</code> to the imports at the top of the file</li>
+<li>Add <code>new RNCPickerPackage()</code> to the list returned by the <code>getPackages()</code> method</li>
+</ul>
+</li>
+<li><p>Append the following lines to <code>android/settings.gradle</code>:</p>
+<pre><code>include ':@react-native-picker_picker'
+project(':@react-native-picker_picker').projectDir = new File(rootProject.projectDir,     '../node_modules/@react-native-picker/picker/android')</code></pre>
+</li>
+<li><p>Insert the following lines inside the dependencies block in <code>android/app/build.gradle</code>:</p>
+<pre><code>implementation project(path: ':@react-native-picker_picker')</code></pre>
+<h4 id="MacOS-1"><a href="#MacOS-1" class="headerlink" title="MacOS"></a>MacOS</h4></li>
+<li><p>In XCode, in the project navigator, right click <code>Libraries</code> ➜ <code>Add Files to [your project's name]</code></p>
+</li>
+<li><p>Go to <code>node_modules</code> ➜ <code> @react-native-picker/picker</code> and add <code>RNCPicker.xcodeproj</code></p>
+</li>
+<li><p>In XCode, in the project navigator, select your project. Add <code>libRNCPicker.a</code> to your project’s <code>Build Phases</code> ➜ <code>Link Binary With Libraries</code></p>
+</li>
+<li><p>Run your project (<code>Cmd+R</code>)&lt;</p>
+</li>
+</ol>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><h3 id="Picker"><a href="#Picker" class="headerlink" title="Picker"></a>Picker</h3><p>Renders the native picker component on iOS and Android. Example:</p>
+<h4 id="Usage-1"><a href="#Usage-1" class="headerlink" title="Usage"></a>Usage</h4><p>Import Picker from <code>@react-native-picker/picker</code></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Picker<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@react-native-picker/picker'</span><span class="token punctuation">;</span></code></pre>
+<p>Create state which will be used by the <code>Picker</code></p>
+<pre class=" language-javascript"><code class="language-javascript">state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  language<span class="token punctuation">:</span> <span class="token string">'java'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>Add <code>Picker</code> like this:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>Picker
+  selectedValue<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>language<span class="token punctuation">}</span>
+  style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>height<span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span> width<span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+  onValueChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>itemValue<span class="token punctuation">,</span> itemIndex<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>language<span class="token punctuation">:</span> itemValue<span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>Picker<span class="token punctuation">.</span>Item label<span class="token operator">=</span><span class="token string">"Java"</span> value<span class="token operator">=</span><span class="token string">"java"</span> <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>Picker<span class="token punctuation">.</span>Item label<span class="token operator">=</span><span class="token string">"JavaScript"</span> value<span class="token operator">=</span><span class="token string">"js"</span> <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Picker<span class="token operator">></span></code></pre>
+<h3 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://reactnative.dev/docs/view#props">Inherited <code>View</code> props…</a></li>
+</ul>
+<ul>
+<li><a href="#onvaluechange"><code>onValueChange</code></a></li>
+<li><a href="#selectedvalue"><code>selectedValue</code></a></li>
+<li><a href="#style"><code>style</code></a></li>
+<li><a href="#testid"><code>testID</code></a></li>
+<li><a href="#enabled"><code>enabled</code></a></li>
+<li><a href="#mode"><code>mode</code></a></li>
+<li><a href="#prompt"><code>prompt</code></a></li>
+<li><a href="#itemstyle"><code>itemStyle</code></a></li>
+</ul>
+<hr>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><h2 id="Props-1"><a href="#Props-1" class="headerlink" title="Props"></a>Props</h2><h3 id="onValueChange"><a href="#onValueChange" class="headerlink" title="onValueChange"></a><code>onValueChange</code></h3><p>Callback for when an item is selected. This is called with the following parameters:</p>
+<ul>
+<li><code>itemValue</code>: the <code>value</code> prop of the item that was selected</li>
+<li><code>itemPosition</code>: the index of the selected item in this picker</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>function</td>
+<td>No</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="selectedValue"><a href="#selectedValue" class="headerlink" title="selectedValue"></a><code>selectedValue</code></h3><p>Value matching value of one of the items. Can be a string or an integer.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>any</td>
+<td>No</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="style"><a href="#style" class="headerlink" title="style"></a><code>style</code></h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pickerStyleType</td>
+<td>No</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="testID"><a href="#testID" class="headerlink" title="testID"></a><code>testID</code></h3><p>Used to locate this view in end-to-end tests.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>string</td>
+<td>No</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="enabled"><a href="#enabled" class="headerlink" title="enabled"></a><code>enabled</code></h3><p>If set to false, the picker will be disabled, i.e. the user will not be able to make a selection.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bool</td>
+<td>No</td>
+<td>Android, Windows</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="mode"><a href="#mode" class="headerlink" title="mode"></a><code>mode</code></h3><p>On Android, specifies how to display the selection items when the user taps on the picker:</p>
+<ul>
+<li>‘dialog’: Show a modal dialog. This is the default.</li>
+<li>‘dropdown’: Shows a dropdown anchored to the picker view</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>enum(‘dialog’, ‘dropdown’)</td>
+<td>No</td>
+<td>Android</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="dropdownIconColor"><a href="#dropdownIconColor" class="headerlink" title="dropdownIconColor"></a><code>dropdownIconColor</code></h3><p>On Android, specifies color of dropdown triangle. Input value should be hexadecimal string</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>string</td>
+<td>No</td>
+<td>Android</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="prompt"><a href="#prompt" class="headerlink" title="prompt"></a><code>prompt</code></h3><p>Prompt string for this picker, used on Android in dialog mode as the title of the dialog.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>string</td>
+<td>No</td>
+<td>Android</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="itemStyle"><a href="#itemStyle" class="headerlink" title="itemStyle"></a><code>itemStyle</code></h3><p>Style to apply to each of the item labels.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://reactnative.dev/docs/text-style-props">text styles</a></td>
+<td>No</td>
+<td>iOS, Windows</td>
+</tr>
+</tbody></table>
+<h3 id="PickerIOS"><a href="#PickerIOS" class="headerlink" title="PickerIOS"></a>PickerIOS</h3><h3 id="Props-2"><a href="#Props-2" class="headerlink" title="Props"></a>Props</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://reactnative.dev/docs/view#props">Inherited <code>View</code> props…</a></li>
+</ul>
+<ul>
+<li><a href="#itemstyle"><code>itemStyle</code></a></li>
+<li><a href="#onvaluechange"><code>onValueChange</code></a></li>
+<li><a href="#selectedvalue"><code>selectedValue</code></a></li>
+</ul>
+<hr>
+<h1 id="Reference-1"><a href="#Reference-1" class="headerlink" title="Reference"></a>Reference</h1><h2 id="Props-3"><a href="#Props-3" class="headerlink" title="Props"></a>Props</h2><h3 id="itemStyle-1"><a href="#itemStyle-1" class="headerlink" title="itemStyle"></a><code>itemStyle</code></h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://reactnative.dev/docs/text-style-props">text styles</a></td>
+<td>No</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="onValueChange-1"><a href="#onValueChange-1" class="headerlink" title="onValueChange"></a><code>onValueChange</code></h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>function</td>
+<td>No</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="selectedValue-1"><a href="#selectedValue-1" class="headerlink" title="selectedValue"></a><code>selectedValue</code></h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>any</td>
+<td>No</td>
+</tr>
+</tbody></table>
+<h2 id="【iOS-Android】增加checkbox组件"><a href="#【iOS-Android】增加checkbox组件" class="headerlink" title="【iOS/Android】增加checkbox组件"></a>【iOS/Android】增加checkbox组件</h2><p><a target="_blank" rel="noopener" href="https://github.com/react-native-checkbox/react-native-checkbox">https://github.com/react-native-checkbox/react-native-checkbox</a></p>
+<h1 id="react-native-community-checkbox"><a href="#react-native-community-checkbox" class="headerlink" title="@react-native-community/checkbox"></a><code>@react-native-community/checkbox</code></h1><p><a target="_blank" rel="noopener" href="https://circleci.com/gh/react-native-community/workflows/react-native-checkbox/tree/master"><img src="https://img.shields.io/circleci/project/github/react-native-community/react-native-checkbox/master.svg" alt="CircleCI Status"></a> <img src="https://img.shields.io/badge/platforms-android%20%7C%20ios%20%7C%20windows-lightgrey.svg" alt="Supports Android, iOS and Windows"> <img src="https://img.shields.io/npm/l/@react-native-community/checkbox.svg" alt="MIT License"> <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@react-native-community/checkbox"><img src="https://img.shields.io/npm/v/@react-native-community/checkbox.svg?style=flat" alt="npm version"></a> <a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/issues/23313"><img src="https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg" alt="Lean Core Extracted"></a></p>
+<p>React Native component for Checkbox</p>
+<table>
+<thead>
+<tr>
+<th align="center">Android Example</th>
+<th align="center">IOS Example</th>
+<th align="center">Windows Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="screenShots/demo-android.png" width="320"></td>
+<td align="center"><img src="screenShots/demo-ios.png" width="320"></td>
+<td align="center"><img src="screenShots/demo-windows.png" width="520"></td>
+</tr>
+</tbody></table>
+<h2 id="Support"><a href="#Support" class="headerlink" title="Support"></a>Support</h2><table>
+<thead>
+<tr>
+<th>RN version</th>
+<th>Checkbox version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&gt; 0.60 &amp; &lt; 0.62</td>
+<td>&gt;= 0.3 (Support IOS from 0.4)</td>
+</tr>
+<tr>
+<td>&lt; 0.60</td>
+<td>0.2 (only Android)</td>
+</tr>
+<tr>
+<td>&gt;= 0.62 to run on Windows</td>
+<td>0.5</td>
+</tr>
+</tbody></table>
+<h2 id="Getting-started-1"><a href="#Getting-started-1" class="headerlink" title="Getting started"></a>Getting started</h2><p><code>yarn add @react-native-community/checkbox</code></p>
+<p>or</p>
+<p><code>npm install @react-native-community/checkbox --save</code></p>
+<p>On iOS, install cocoapods:</p>
+<p><code>npx pod-install</code></p>
+<p>On Windows with RNW 62 or earlier, you need to <a href="###Manual-installation"><code>manually link the module</code></a> (on RNW 63 and later autolinking will work).</p>
+<h3 id="Mostly-automatic-installation"><a href="#Mostly-automatic-installation" class="headerlink" title="Mostly automatic installation"></a>Mostly automatic installation</h3><p>From react-native &gt;= 0.60 autolinking will take care of the link (on iOS and Android)</p>
+<p>for react-native =&lt; 0.59.X</p>
+<p><code>react-native link @react-native-community/checkbox</code></p>
+<h3 id="Manual-installation"><a href="#Manual-installation" class="headerlink" title="Manual installation"></a>Manual installation</h3><details>
+<summary>Manually link the library on Android</summary>
+
+<h4 id="android-settings-gradle"><a href="#android-settings-gradle" class="headerlink" title="android/settings.gradle"></a><code>android/settings.gradle</code></h4><pre class=" language-groovy"><code class="language-groovy">include <span class="token string">':react-native-community-checkbox'</span>
+<span class="token function">project</span><span class="token punctuation">(</span><span class="token string">':react-native-community-checkbox'</span><span class="token punctuation">)</span><span class="token operator">.</span>projectDir <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>rootProject<span class="token operator">.</span>projectDir<span class="token punctuation">,</span> <span class="token string">'../node_modules/@react-native-community/checkbox/android'</span><span class="token punctuation">)</span></code></pre>
+<h4 id="android-app-build-gradle"><a href="#android-app-build-gradle" class="headerlink" title="android/app/build.gradle"></a><code>android/app/build.gradle</code></h4><pre class=" language-groovy"><code class="language-groovy">dependencies <span class="token punctuation">{</span>
+   <span class="token punctuation">...</span>
+   implementation <span class="token function">project</span><span class="token punctuation">(</span><span class="token string">':react-native-community-checkbox'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="android-app-src-main-MainApplication-java"><a href="#android-app-src-main-MainApplication-java" class="headerlink" title="android/app/src/main/.../MainApplication.java"></a><code>android/app/src/main/.../MainApplication.java</code></h4><p>On top, where imports are:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> com<span class="token punctuation">.</span>reactnativecommunity<span class="token punctuation">.</span>checkbox<span class="token punctuation">.</span>ReactCheckBoxPackage<span class="token punctuation">;</span></code></pre>
+<p>Add the <code>checkbox</code> class to your list of exported packages.</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Override</span>
+<span class="token keyword">protected</span> List<span class="token operator">&lt;</span>ReactPackage<span class="token operator">></span> <span class="token function">getPackages</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Arrays<span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>
+            <span class="token keyword">new</span> <span class="token class-name">MainReactPackage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token keyword">new</span> <span class="token class-name">ReactCheckBoxPackage</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+</details>
+
+<details>
+<summary>Manually link the library on Windows</summary>
+
+<h4 id="Add-the-CheckboxWindows-project-to-your-solution"><a href="#Add-the-CheckboxWindows-project-to-your-solution" class="headerlink" title="Add the CheckboxWindows project to your solution"></a>Add the CheckboxWindows project to your solution</h4><ol>
+<li>Open the solution in Visual Studio 2019.</li>
+<li>Right-click solution icon in Solution Explorer &gt; Add &gt; Existing Project.<br>Select ‘D:\pathToYourApp\node_modules@react-native-community\checkbox\windows\CheckboxWindows\CheckboxWindows.vcxproj’.</li>
+</ol>
+<h4 id="windows-myapp-sln-1"><a href="#windows-myapp-sln-1" class="headerlink" title="windows/myapp.sln"></a><strong>windows/myapp.sln</strong></h4><p>Add a reference to <code>CheckboxWindows</code> to your main application project. From Visual Studio 2019:</p>
+<p>Right-click main application project &gt; Add &gt; Reference…<br>Check ‘CheckboxWindows’ from the ‘Project &gt; Solution’ tab on the left.</p>
+<h4 id="pch-h-1"><a href="#pch-h-1" class="headerlink" title="pch.h"></a><strong>pch.h</strong></h4><p>Add <code>#include "winrt/CheckboxWindows.h"</code>.</p>
+<h4 id="app-cpp-1"><a href="#app-cpp-1" class="headerlink" title="app.cpp"></a><strong>app.cpp</strong></h4><p>Add <code>PackageProviders().Append(winrt::CheckboxWindows::ReactPackageProvider());</code> before <code>InitializeComponent();</code>.</p>
+</details>
+
+<h2 id="Migrating-from-the-core-react-native-module"><a href="#Migrating-from-the-core-react-native-module" class="headerlink" title="Migrating from the core react-native module"></a>Migrating from the core <code>react-native</code> module</h2><p>This module was created when the CheckBox was split out from the core of React Native. To migrate to this module you need to follow the installation instructions above and then change your imports from:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> CheckBox <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span></code></pre>
+<p>to:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> CheckBox <span class="token keyword">from</span> <span class="token string">'@react-native-community/checkbox'</span><span class="token punctuation">;</span></code></pre>
+<h2 id="Usage-2"><a href="#Usage-2" class="headerlink" title="Usage"></a>Usage</h2><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> CheckBox <span class="token keyword">from</span> <span class="token string">'@react-native-community/checkbox'</span><span class="token punctuation">;</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript">  <span class="token keyword">const</span> <span class="token punctuation">[</span>toggleCheckBox<span class="token punctuation">,</span> setToggleCheckBox<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+
+  <span class="token operator">&lt;</span>CheckBox
+    disabled<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">false</span><span class="token punctuation">}</span>
+    value<span class="token operator">=</span><span class="token punctuation">{</span>toggleCheckBox<span class="token punctuation">}</span>
+    onValueChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">setToggleCheckBox</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span><span class="token punctuation">}</span>
+  <span class="token operator">/</span><span class="token operator">></span></code></pre>
+<p>Check out the <a href="example">example project</a> for more examples.</p>
+<h3 id="Props-4"><a href="#Props-4" class="headerlink" title="Props"></a>Props</h3><h2 id="Common-Props"><a href="#Common-Props" class="headerlink" title="Common Props"></a>Common Props</h2><p><a target="_blank" rel="noopener" href="https://reactnative.dev/docs/view#props">View props…</a></p>
+<table>
+<thead>
+<tr>
+<th>Prop name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onChange</td>
+<td>function</td>
+<td>Invoked on change with the native event.</td>
+</tr>
+<tr>
+<td>onValueChange</td>
+<td>function</td>
+<td>Invoked with the new boolean value when it changes.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>boolean</td>
+<td>The value of the checkbox. If true the checkbox will be turned on. Default value is false.</td>
+</tr>
+<tr>
+<td>testID</td>
+<td>string</td>
+<td>Used to locate this view in end-to-end tests.</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>boolean</td>
+<td>If true the user won’t be able to toggle the checkbox. Default value is false.</td>
+</tr>
+</tbody></table>
+<h2 id="Android-Only-Props"><a href="#Android-Only-Props" class="headerlink" title="Android Only Props"></a>Android Only Props</h2><table>
+<thead>
+<tr>
+<th>Prop name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tintColors</td>
+<td>string</td>
+<td>An object with the following shape: <code>{ true?: ?ColorValue, false?: ?ColorValue }</code>. The color value for <code>true</code> will be used when the checkbox is checked, and the color value for <code>false</code> will be used when it is off.</td>
+</tr>
+</tbody></table>
+<h2 id="IOS-Only-Props"><a href="#IOS-Only-Props" class="headerlink" title="IOS Only Props"></a>IOS Only Props</h2><table>
+<thead>
+<tr>
+<th>Prop name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lineWidth</td>
+<td>number</td>
+<td>The width of the lines of the check mark and box. Defaults to 2.0.</td>
+</tr>
+<tr>
+<td>hideBox</td>
+<td>boolean</td>
+<td>Control if the box should be hidden or not. Defaults to false</td>
+</tr>
+<tr>
+<td>boxType</td>
+<td>‘circle’ or ‘square’</td>
+<td>The type of box to use. Defaults to ‘circle’</td>
+</tr>
+<tr>
+<td>tintColor</td>
+<td>string</td>
+<td>The color of the box when the checkbox is Off. Defaults to ‘#aaaaaa’</td>
+</tr>
+<tr>
+<td>onCheckColor</td>
+<td>string</td>
+<td>The color of the check mark when it is On. Defaults to ‘#007aff’</td>
+</tr>
+<tr>
+<td>onFillColor</td>
+<td>string</td>
+<td>The color of the inside of the box when it is On. Defaults to transparent</td>
+</tr>
+<tr>
+<td>onTintColor</td>
+<td>string</td>
+<td>The color of the line around the box when it is On. Defaults to ‘#007aff’</td>
+</tr>
+<tr>
+<td>animationDuration</td>
+<td>number</td>
+<td>The duration in seconds of the animations. Defaults to 0.5</td>
+</tr>
+<tr>
+<td>onAnimationType</td>
+<td>‘stroke’ or ‘fill’ or ‘bounce’ or ‘flat’ or ‘one-stroke’ or ‘fade’</td>
+<td>The type of animation to use when the checkbox gets checked. Default to ‘stroke’</td>
+</tr>
+<tr>
+<td>offAnimationType</td>
+<td>‘stroke’ or ‘fill’ or ‘bounce’ or ‘flat’ or ‘one-stroke’ or ‘fade’</td>
+<td>The type of animation to use when the checkbox gets unchecked. ‘stroke’</td>
+</tr>
+</tbody></table>
+<h2 id="Windows-Props"><a href="#Windows-Props" class="headerlink" title="Windows Props"></a>Windows Props</h2><p>Implemented most of iOS and Android props.<br>Defaults for color styling can be referenced here:<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/controls/checkbox-styles-and-templates">https://docs.microsoft.com/en-us/dotnet/framework/wpf/controls/checkbox-styles-and-templates</a></p>
+<table>
+<thead>
+<tr>
+<th>Prop name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>disabled</td>
+<td>boolean</td>
+<td>If true the user won’t be able to toggle the checkbox. Default value is false.</td>
+</tr>
+<tr>
+<td>tintColor</td>
+<td>string</td>
+<td>The color of the box when the checkbox is Off.</td>
+</tr>
+<tr>
+<td>onCheckColor</td>
+<td>string</td>
+<td>The color of the check mark when it is On.</td>
+</tr>
+<tr>
+<td>onFillColor</td>
+<td>string</td>
+<td>The color of the inside of the box when it is On.</td>
+</tr>
+<tr>
+<td>onTintColor</td>
+<td>string</td>
+<td>The color of the line around the box when it is On.</td>
+</tr>
+</tbody></table>
+<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>This module was extracted from <code>react-native</code> core.</p>
+<p>The implementaion of IOS version refered to <a target="_blank" rel="noopener" href="https://github.com/Boris-Em/BEMCheckBox">BEMCheckBox</a></p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>The library is released under the MIT licence. For more information see <code>LICENSE</code>.</p>
+<h2 id="【iOS-Android】扫码组件"><a href="#【iOS-Android】扫码组件" class="headerlink" title="【iOS/Android】扫码组件"></a>【iOS/Android】扫码组件</h2><h1 id="expo-barcode-scanner"><a href="#expo-barcode-scanner" class="headerlink" title="expo-barcode-scanner"></a>expo-barcode-scanner</h1><p>允许扫描各种受支持的条形码，既可以作为独立模块，也可以作为相机的扩展进行扫描。它还允许从现有图像中扫描条形码。</p>
+<h1 id="API-文档"><a href="#API-文档" class="headerlink" title="API 文档"></a>API 文档</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/expo/expo/blob/master/docs/pages/versions/unversioned/sdk/bar-code-scanner.md">Documentation for the master branch</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.expo.io/versions/latest/sdk/bar-code-scanner/">Documentation for the latest stable release</a></li>
+</ul>
+<h1 id="在React-Native项目中安装"><a href="#在React-Native项目中安装" class="headerlink" title="在React Native项目中安装"></a>在React Native项目中安装</h1><p>对于React Native项目，您必须先确保<a target="_blank" rel="noopener" href="https://github.com/expo/expo/tree/master/packages/react-native-unimodules">安装和配置react-native-unimodules软件包</a>，然后再继续。</p>
+<h3 id="添加到依赖"><a href="#添加到依赖" class="headerlink" title="添加到依赖"></a>添加到依赖</h3><pre><code>expo install expo-barcode-scanner</code></pre>
+<h3 id="为IOS配置"><a href="#为IOS配置" class="headerlink" title="为IOS配置"></a>为IOS配置</h3><p>Add <code>NSCameraUsageDescription</code> and <code>NSMicrophoneUsageDescription</code> key to your <code>Info.plist</code>:</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>NSCameraUsageDescription<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>Allow $(PRODUCT_NAME) to use the camera<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>NSMicrophoneUsageDescription<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>Allow $(PRODUCT_NAME) to use the microphone<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span></code></pre>
+<p>Run <code>npx pod-install</code> after installing the npm package.</p>
+<h3 id="为Android配置"><a href="#为Android配置" class="headerlink" title="为Android配置"></a>为Android配置</h3><p>This package automatically adds the <code>CAMERA</code> permission to your app.</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!-- Added permissions --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>android.permission.CAMERA<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><pre><code>import React, { useState, useEffect } from 'react';
+import { Text, View, StyleSheet, Button } from 'react-native';
+import { BarCodeScanner } from 'expo-barcode-scanner';
+
+export default function App() {
+  const [hasPermission, setHasPermission] = useState(null);
+  const [scanned, setScanned] = useState(false);
+
+  useEffect(() =&gt; {
+    (async () =&gt; {
+      const { status } = await BarCodeScanner.requestPermissionsAsync();
+      setHasPermission(status === 'granted');
+    })();
+  }, []);
+
+  const handleBarCodeScanned = ({ type, data }) =&gt; {
+    setScanned(true);
+    alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+  };
+
+  if (hasPermission === null) {
+    return &lt;Text&gt;Requesting for camera permission&lt;/Text&gt;;
+  }
+  if (hasPermission === false) {
+    return &lt;Text&gt;No access to camera&lt;/Text&gt;;
+  }
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;BarCodeScanner
+        onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+        style={StyleSheet.absoluteFillObject}
+      /&gt;
+      {scanned &amp;&amp; &lt;Button title={'Tap to Scan Again'} onPress={() =&gt; setScanned(false)} /&gt;}
+    &lt;/View&gt;
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+});</code></pre>
+<h2 id="增加轻提示"><a href="#增加轻提示" class="headerlink" title="增加轻提示"></a>增加轻提示</h2><p><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/react-native-simple-toast">react-native-simple-toast</a></p>
+<p>适用于Android和iOS的React Native Toast组件。它只是让iOS用户拥有与Android相同的体验。在iOS上使用 <a target="_blank" rel="noopener" href="https://github.com/scalessec/Toast">scalessec/Toast</a>，在Android上使用标准<a target="_blank" rel="noopener" href="https://reactnative.dev/docs/toastandroid">ToastAndroid</a>；</p>
+<p>安装</p>
+<pre class=" language-shell"><code class="language-shell">npm install react-native-simple-toast --save
+react-native link react-native-simple-toast // only RN < 0.60
+cd ios && pod install</code></pre>
+<p>用法</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 默认使用 Toast.SHORT </span>
+show<span class="token punctuation">:</span> <span class="token punctuation">(</span>message<span class="token punctuation">:</span> string<span class="token punctuation">,</span> duration<span class="token operator">?</span><span class="token punctuation">:</span> number<span class="token punctuation">,</span> viewControllerBlacklist<span class="token operator">?</span><span class="token punctuation">:</span> Array<span class="token operator">&lt;</span>string<span class="token operator">></span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">,</span>
+showWithGravity<span class="token punctuation">:</span> <span class="token punctuation">(</span>
+message<span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+duration<span class="token punctuation">:</span> number<span class="token punctuation">,</span>
+gravity<span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+viewControllerBlacklist<span class="token operator">?</span><span class="token punctuation">:</span> Array<span class="token operator">&lt;</span>string<span class="token operator">></span>
+<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">,</span></code></pre>
+<p>请注意viewControllerBlacklist：这是一个仅限iOS的选项，在android上将被忽略。</p>
+<p>例子</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Toast <span class="token keyword">from</span> <span class="token string">'react-native-simple-toast'</span><span class="token punctuation">;</span>
+
+Toast<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token string">'This is a toast.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Toast<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token string">'This is a long toast.'</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LONG<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Toast<span class="token punctuation">.</span><span class="token function">showWithGravity</span><span class="token punctuation">(</span><span class="token string">'This is a long toast at the top.'</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LONG<span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>TOP<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Toast<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token string">'This is nicely visible even if you call this when an Alert is shown'</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>SHORT<span class="token punctuation">,</span> <span class="token punctuation">[</span>
+  <span class="token string">'UIAlertController'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2 id="解决android原生配置键盘顶高组件问题"><a href="#解决android原生配置键盘顶高组件问题" class="headerlink" title="解决android原生配置键盘顶高组件问题"></a>解决android原生配置键盘顶高组件问题</h2><p>修改该目录：android/app/src/main/AndroidManifest.xml</p>
+<pre><code>        android:windowSoftInputMode="adjustResize"&gt;
+        //改为：
+        android:windowSoftInputMode="stateAlwaysHidden|adjustPan"&gt;
+</code></pre>
+<h2 id="【Android】获取手机imei码"><a href="#【Android】获取手机imei码" class="headerlink" title="【Android】获取手机imei码"></a>【Android】获取手机imei码</h2><p><a target="_blank" rel="noopener" href="https://github.com/SimenCodes/react-native-imei">https://github.com/SimenCodes/react-native-imei</a></p>
+<p>Apple不允许应用访问设备识别信息，例如IMEI。</p>
+<p> 1.在项目根目录下：</p>
+<pre class=" language-shell"><code class="language-shell">npm install --save react-native-imei</code></pre>
+<p>2.然后修改<code>android &gt; app &gt; src &gt; androidMainifest.xml</code>文件添加：</p>
+<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>uses<span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">"android.permission.READ_PHONE_STATE"</span><span class="token operator">/</span><span class="token operator">></span></code></pre>
+<p>3.在项目根目录下 ：</p>
+<pre class=" language-shell"><code class="language-shell">react-native link react-native-imei</code></pre>
+<p>4.用例</p>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">const</span> IMEI <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'react-native-imei'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+IMEI<span class="token punctuation">.</span><span class="token function">getImei</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>imeiList <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>imeiList<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// imeiList是一个数组，能插多卡的手机会有几个imei</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>如果已经在AndroidManifest.xml中添加了权限(<uses-permission android:name="android.permission.READ_PHONE_STATE">)还是报如下错：</uses-permission></p>
+<pre><code>java exception in'NativeModules'
+java.lang.SecurityException:getDeviceld:Neither user 10002 nor current process has android.permission.READ_PHONE_STATE</code></pre>
+<p>请打开手机的设置-&gt;应用和通知-&gt;应用管理-&gt;找到自己测试的app，点击进去-&gt;权限-&gt;准许电话权限</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">BiLiang</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://liang996.github.io/2021/022664784.html">https://liang996.github.io/2021/022664784.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">BiLiang</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ReactNative/">
+                                    <span class="chip bg-color">ReactNative</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/zfb.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wx.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'S5uu9gqhvWl4fg9VoCfbKr8G-gzGzoHsz',
+        appKey: 'atYzx2bcExbhB3c4FFxnoI1Y',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '快来评论一下哟～～'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/02271011.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="javaScript面向对象">
+                        
+                        <span class="card-title">javaScript面向对象</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            面向对象编程是用抽象方式创建基于现实世界模型的一种编程模式。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/javaScript/" class="post-category">
+                                    javaScript
+                                </a>
+                            
+                            <a href="/categories/javaScript/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="post-category">
+                                    面向对象
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/javaScript/">
+                        <span class="chip bg-color">javaScript</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                        <span class="chip bg-color">面向对象</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/022655706.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="JavaScript常用宝典">
+                        
+                        <span class="card-title">JavaScript常用宝典</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            JavaScript对于不同的操作对象有着不同的方法。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JavaScript/" class="post-category">
+                                    JavaScript
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+                            <footer class="page-footer bg-color">
+    
+    <div class="container row center-align"
+        style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">BiLiang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/liang996" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">153.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/liang996" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:445143561@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=445143561" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 445143561" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+                                <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+                                    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+                                        <script src="/js/cursor.js"></script>
+                                        <script src="/js/click_show_text.js"></script>
+
+
+                                        <script
+                                            src="/libs/materialize/materialize.min.js"></script>
+                                        <script
+                                            src="/libs/masonry/masonry.pkgd.min.js"></script>
+                                        <script
+                                            src="/libs/aos/aos.js"></script>
+                                        <script
+                                            src="/libs/scrollprogress/scrollProgress.min.js"></script>
+                                        <script
+                                            src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+                                        <script
+                                            src="/js/matery.js"></script>
+
+                                        <script type="text/javascript">
+                                            //只在桌面版网页启用特效
+                                            var windowWidth = $(window).width();
+                                            if (windowWidth > 768) {
+                                                document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+                                            }
+                                        </script>
+                                        <script type="text/javascript">
+                                            var OriginTitile = document.title, st;
+                                            document.addEventListener("visibilitychange", function () {
+                                                document.hidden ? (document.title = "喔呦，网页崩溃啦", clearTimeout(st)) : (document.title = "小主人回来拉！", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+                                            })
+                                        </script>
+                                        <!-- Baidu Analytics -->
+
+                                            <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+                                                
+                                                    <script
+                                                        src="/libs/others/clicklove.js"
+                                                        async="async"></script>
+                                                    
+                                                        
+                                                            <script async
+                                                                src="/libs/others/busuanzi.pure.mini.js"></script>
+                                                            
+
+                                                                
+
+                                                                        
+
+                                                                                
+                                                                                    <script type="text/javascript"
+                                                                                        color="0,0,255"
+                                                                                        pointColor="0,0,255"
+                                                                                        opacity='0.7'
+                                                                                        zIndex="-1"
+                                                                                        count="99"
+                                                                                        src="/libs/background/canvas-nest.js"></script>
+                                                                                    
+
+                                                                                        
+                                                                                            
+                                                                                                <script
+                                                                                                    type="text/javascript"
+                                                                                                    size="150"
+                                                                                                    alpha='0.6'
+                                                                                                    zIndex="-1"
+                                                                                                    src="/libs/background/ribbon.min.js"
+                                                                                                    async="async"></script>
+                                                                                                
+
+                                                                                                    
+                                                                                                        <script
+                                                                                                            type="text/javascript"
+                                                                                                            src="/libs/background/ribbon-dynamic.js"
+                                                                                                            async="async"></script>
+                                                                                                        
+
+                                                                                                            
+                                                                                                                <script
+                                                                                                                    src="/libs/instantpage/instantpage.js"
+                                                                                                                    type="module"></script>
+                                                                                                                
+
+                                                                                                                    <div
+                                                                                                                        id="weather-v2-plugin-simple">
+                                                                                                                    </div>
+                                                                                                                    <script>
+                                                                                                                        WIDGET = {
+                                                                                                                            CONFIG: {
+                                                                                                                                "modules": "01234",
+                                                                                                                                "background": 1,
+                                                                                                                                "tmpColor": "FFFFFF",
+                                                                                                                                "tmpSize": 16,
+                                                                                                                                "cityColor": "FFFFFF",
+                                                                                                                                "citySize": 16,
+                                                                                                                                "aqiSize": 16,
+                                                                                                                                "weatherIconSize": 24,
+                                                                                                                                "alertIconSize": 18,
+                                                                                                                                "padding": "10px 10px 10px 10px",
+                                                                                                                                "shadow": "1",
+                                                                                                                                "language": "auto",
+                                                                                                                                "borderRadius": 5,
+                                                                                                                                "fixed": "false",
+                                                                                                                                "vertical": "middle",
+                                                                                                                                "horizontal": "center",
+                                                                                                                                "key": "cT3BGIaCRd"
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    </script>
+                                                                                                                    <script
+                                                                                                                        src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>
+                                                                                                                    <script
+                                                                                                                        src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+
+                                                                                                                    <script
+                                                                                                                        type="text/javascript"
+                                                                                                                        color="0,0,255"
+                                                                                                                        opacity='0.7'
+                                                                                                                        zIndex="-2"
+                                                                                                                        count="99"
+                                                                                                                        src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+                </body>
+
+</html>

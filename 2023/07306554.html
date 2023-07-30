@@ -1,0 +1,2282 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="2023年面试总结, HTML,CSS,JavaScript,React,node">
+    <meta name="description" content="专注于Web知识积累，热爱于每一份生活耕耘">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>2023年面试总结 | 灯@塔</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="灯@塔" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+    
+
+                <body>
+                    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">灯@塔</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/gallery" class="waves-effect waves-light">
+      
+      <span>我的相册</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+  <div class="mobile-head bg-color">
+    
+    <img src="/medias/logo.png" class="logo-img circle responsive-img">
+    
+    <div class="logo-name">灯@塔</div>
+    <div class="logo-desc">
+      
+      专注于Web知识积累，热爱于每一份生活耕耘
+      
+    </div>
+  </div>
+
+  
+
+  <ul class="menu-list mobile-menu-list">
+    
+    <li class="m-nav-item">
+      
+      <a href="/" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-home"></i>
+        
+        首页
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/tags" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-tags"></i>
+        
+        标签
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/categories" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-bookmark"></i>
+        
+        分类
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/archives" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-archive"></i>
+        
+        归档
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/about" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-user-circle"></i>
+        
+        关于
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/contact" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-comments"></i>
+        
+        留言板
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/friends" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-address-book"></i>
+        
+        友情链接
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/gallery" class="waves-effect waves-light">
+        
+        <i class="fas fa-fw fa-link"></i>
+        
+        我的相册
+      </a>
+      
+        </li>
+        
+        
+        <li><div class=" divider">
+</div>
+</li>
+<li>
+  <a href="https://github.com/liang996" class="waves-effect waves-light" target="_blank">
+    <i class="fab fa-github-square fa-fw"></i>Fork Me
+  </a>
+</li>
+
+</ul>
+</div>
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/liang996" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+                        
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">2023年面试总结</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">前端面试</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" class="post-category">
+                                前端面试
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-07-30
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-07-30
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    13.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    51 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="react-hooks"><a href="#react-hooks" class="headerlink" title="react hooks"></a>react hooks</h2><p>React Hooks 是从 React 16.8 版本推出的新特性，目的是解决 React 的状态共享以及组件生命周期管理混乱的问题，Hooks 是对 React function 组件的一种扩展，通过一些特殊的函数，让无状态组件拥有状态组件才拥有的能力</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">useMemo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">useRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">useContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">useReducer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2 id="useEffect-用法"><a href="#useEffect-用法" class="headerlink" title="useEffect 用法"></a>useEffect 用法</h2><p>useEffect 钩子是 react 钩子 API 的一部分。如果你熟悉 react 生命周期，useEffect 钩子相当于生命周期方法 <code>componentDidMount</code>、<code>componentDidUpdate</code> 和 <code>componentWillUnmount</code> 的组合。<code>useEffect</code> 是一个接受<code>两</code>个参数的函数。传递给 useEffect 的第一个参数是一个名为 effect 的函数（你可以猜到为什么这个钩子叫 useEffect），第二个参数（是可选的）是一个存储依赖关系的数组。</p>
+<h2 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h2><p>高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。 HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。 具体而言，高阶组件是参数为组件，返回值为新组件的函数。<br>高阶组件不是组件，是增强函数，可以输入一个元组件，输出一个新的增强组件<br>高阶组件的主要作用是代码复用，操作状态和参数</p>
+<h2 id="react-性能优化的方法"><a href="#react-性能优化的方法" class="headerlink" title="react 性能优化的方法"></a>react 性能优化的方法</h2><p>1.使用 React.Memo 来缓存组件</p>
+<p>2.使用 useMemo 缓存大量的计算</p>
+<p>3.使用 React.PureComponent , shouldComponentUpdate</p>
+<p>4.使用 React.Fragment 避免添加额外的 DOM</p>
+<h2 id="事件循环机制"><a href="#事件循环机制" class="headerlink" title="事件循环机制"></a>事件循环机制</h2><p>简单的说，事件循环（eventLoop）是单线程的 JavaScript 在处理异步事件时进行的一种循环过程，具体来讲，对于异步事件它会先加入到事件队列中挂起，等主线程空闲时会去执行事件队列中的事件。</p>
+<p>主线程任务——&gt;微任务——&gt;宏任务 如果宏任务里还有微任就继续执行宏任务里的微任务，如果宏任务中的微任务中还有宏任务就在依次进行<br>主线程任务——&gt;微任务——&gt;宏任务——&gt;宏任务里的微任务——&gt;宏任务里的微任务中的宏任务——&gt;直到任务全部完成 我的理解是在同级下，微任务要优先于宏任务执行</p>
+<p>在同一轮任务队列中，同一个微任务产生的微任务会放在这一轮微任务的后面，产生的宏任务会放在这一轮的宏任务后面<br>在同一轮任务队列中，同一个宏任务产生的微任务会马上执行，产生的宏任务会放在这一轮的宏任务后面</p>
+<p>它不停检查 Call Stack 中是否有任务（也叫栈帧）需要执行，如果没有，就检查 Event Queue，从中弹出一个任务，放入 Call Stack 中，如此往复循环。</p>
+<h2 id="项目是怎么部署的"><a href="#项目是怎么部署的" class="headerlink" title="项目是怎么部署的"></a>项目是怎么部署的</h2><p>1.Jenkins</p>
+<p>2.webpack</p>
+<h2 id="hooks-和类组件的区别"><a href="#hooks-和类组件的区别" class="headerlink" title="hooks 和类组件的区别"></a>hooks 和类组件的区别</h2><p>区别：</p>
+<p>1、hooks 的写法比 class 简洁；</p>
+<p>2、hooks 的业务代码比 class 更加聚合；</p>
+<p>3、class 组件的逻辑复用通常用 render props 以及 HOC 两种方式，而 react hooks 提供了自定义 hooks 来复用逻辑。</p>
+<h2 id="useeffects-模仿类组件生命周期"><a href="#useeffects-模仿类组件生命周期" class="headerlink" title="useeffects 模仿类组件生命周期"></a>useeffects 模仿类组件生命周期</h2><p>useEffect 钩子是 react 钩子 API 的一部分。如果你熟悉 react 生命周期，useEffect 钩子相当于生命周期方法 componentDidMount、componentDidUpdate 和 componentWillUnmount 的组合。</p>
+<h2 id="ts-泛型了解吗"><a href="#ts-泛型了解吗" class="headerlink" title="ts 泛型了解吗"></a>ts 泛型了解吗</h2><pre><code>泛型（Generics）是指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定类型的一种特性，使接口，函数或类更加通用</code></pre>
+<h2 id="webpack-你常用的-loader-plugin-，有做过-webpack-优化吗"><a href="#webpack-你常用的-loader-plugin-，有做过-webpack-优化吗" class="headerlink" title="webpack 你常用的 loader plugin ，有做过 webpack 优化吗"></a>webpack 你常用的 loader plugin ，有做过 webpack 优化吗</h2><p><code>常用 loader</code></p>
+<p>（1）babel-loader：把 es6 转成 es5；</p>
+<p>（2）css-loader：加载 css，支持模块化，压缩，文件导入等特性；</p>
+<p>（3）style-loader：把 css 代码注入到 js 中，通过 dom 操作去加载 css；</p>
+<p>（4）eslint-loader：通过 Eslint 检查 js 代码；</p>
+<p>（5）image-loader：加载并且压缩图片晚间；</p>
+<p>（6）file-loader：文件输出到一个文件夹中，在代码中通过相对 url 去引用输出的文件；</p>
+<p>（7）url-loader：和 file-loader 类似，文件很小的时候可以 base64 方式吧文件内容注入到代码中。</p>
+<p>（8）source-map-loader：加载额外的 source map 文件，方便调试。</p>
+<p><code>常用 plugin</code></p>
+<p>（1）uglifyjs-webpack-plugin：通过 UglifyJS 去压缩 js 代码；</p>
+<p>（2）commons-chunk-plugin：提取公共代码；</p>
+<p>（3）define-plugin：定义环境变量。</p>
+<h2 id="webpack-原理"><a href="#webpack-原理" class="headerlink" title="webpack 原理"></a>webpack 原理</h2><p>webpack 是一个打包模块化 js 的工具，可以通过 loader 转换文件，通过 plugin 扩展功能。</p>
+<h2 id="封装过哪些组件，怎么封装的"><a href="#封装过哪些组件，怎么封装的" class="headerlink" title="封装过哪些组件，怎么封装的"></a>封装过哪些组件，怎么封装的</h2><p>封装时考虑的因素</p>
+<p>1.我们需要考虑到未来的可维护性和复用性，这时就需要抽象出通用的逻辑或者功能，以便在不同的项目中使用</p>
+<p>2.在开发组件时，需要将组件内部的数据和展示进行分离，以便组件的复用性和可维护性更高。通过 props 属性将外部的数据传递给组件，以便组件可以根据外部的数据进行展示。</p>
+<p>3.抽象组件样式：在进行组件封装时，我们需要考虑到组件的样式问题</p>
+<h2 id="路由守卫做过吗，怎么实现的"><a href="#路由守卫做过吗，怎么实现的" class="headerlink" title="路由守卫做过吗，怎么实现的"></a>路由守卫做过吗，怎么实现的</h2><p>路由守卫是什么<br>React Router 路由守卫（Route Guard）可以用来在进入或离开某个路由时进行验证和控制，以实现路由的权限管理、用户登录验证等功能。 React Router 提供了多种路由守卫的实现方式，包括使用高阶组件、使用函数组件和使用 render 属性等方式。</p>
+<p>与 vue 不同，vue 直接使用 beforeEach 即可实现全局路由守卫等功能。<br>react 要实现路由守卫得自己配置。<br>实现该功能的前提是你需要先掌握 react 的高阶组件的使用</p>
+<p>需要配置一张路由表。<br>需要使用高阶组件。</p>
+<h2 id="空值合并运算符（-）与逻辑或运算符（-）区别"><a href="#空值合并运算符（-）与逻辑或运算符（-）区别" class="headerlink" title="空值合并运算符（??）与逻辑或运算符（||）区别"></a>空值合并运算符（??）与逻辑或运算符（||）区别</h2><p>空值合并运算符（nullish coalescing operator）的写法为两个问号 ??。</p>
+<p>我们可以使用我们已知的运算符重写 <code>result = a ?? b</code>，像这样：</p>
+<pre class=" language-js"><code class="language-js">result <span class="token operator">=</span> a <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> a <span class="token operator">!==</span> undefined <span class="token operator">?</span> a <span class="token punctuation">:</span> b<span class="token punctuation">;</span></code></pre>
+<p>例如，在这里，如果 user 的值不为 null/undefined 则显示 user，否则显示 匿名：</p>
+<p>let user;</p>
+<p>alert(user ?? “匿名”); // 匿名（user 未定义）</p>
+<h2 id="可选链操作符"><a href="#可选链操作符" class="headerlink" title="?.(可选链操作符)"></a>?.(可选链操作符)</h2><p>?.表示：可选链操作符( ?. )允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每 个引用是否有效。操作符的功能类似于 . 链式操作符，不同之处在于，在引用为空(null 或者 undefined) 的情况下不会引起错误，该表达式短路返回值</p>
+<p>?.的个人理解 打个比方就是判断对象的某个属性是否存在，如果存在那么就返回整个属性的值，否则返回 undefined</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+  getName<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"123"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> result1 <span class="token operator">=</span> a<span class="token operator">?</span><span class="token punctuation">.</span>getName<span class="token operator">?</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 123</span>
+<span class="token keyword">let</span> result2 <span class="token operator">=</span> a<span class="token operator">?</span><span class="token punctuation">.</span>setName<span class="token operator">?</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// undefined</span></code></pre>
+<p>与函数调用一起使用时，如果给定的函数不存在，则返回 undefined，不会报错</p>
+<p>注意： 如果被当作方法调用的是一个属性，使用?.还是会报错</p>
+<h2 id="了解过-fiber-吗-（用于解决渲染复杂组件时产生的卡顿问题）"><a href="#了解过-fiber-吗-（用于解决渲染复杂组件时产生的卡顿问题）" class="headerlink" title="了解过 fiber 吗 （用于解决渲染复杂组件时产生的卡顿问题）"></a>了解过 fiber 吗 （用于解决渲染复杂组件时产生的卡顿问题）</h2><p>React 更新视图的原理：通过 setState 改变数据从而触发虚拟 DOM 去进行对比，对比结束后将再进行 DOM 更新。当对比少的节点时使用这种方法时比较合理的，但是当我们一次更新有几百个甚至更多组件需要进行对比时，由于 Diff 是一个同步的方法，在进行对比时，由于 JS 单线程的原因，导致其他的事件都无法响应。<br>当在这个 Diff 的过程中如果有有通过 Input 输入信息，那么他将得不到响应，显然这样体验会非常不好。</p>
+<p>针对这样的问题，React 16+中首次引入了 React Fiber，就是用于解决渲染复杂组件时产生的卡顿问题。</p>
+<h2 id="css-动画结束后触发一个事件怎么做"><a href="#css-动画结束后触发一个事件怎么做" class="headerlink" title="css 动画结束后触发一个事件怎么做"></a>css 动画结束后触发一个事件怎么做</h2><p>第一种方法：<br>用计时器，设定一个和动画时长一样的 time，过 time 事件去执行这个函数。</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> time<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>第二种方法：</p>
+<p>当-webkit-animation 动画结束时有一个 webkitAnimationEnd 事件，只要监听这个事件就可以了。</p>
+<p>不同浏览器的 AnimationEnd 写法</p>
+<pre><code>(webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend)</code></pre>
+<h2 id="判断类型的方法"><a href="#判断类型的方法" class="headerlink" title="判断类型的方法"></a>判断类型的方法</h2><p>判断类型有四种方法（不全但是相对来说挺全了，而且也够用了）</p>
+<p>1.typeof</p>
+<p>2.instanceof</p>
+<p>3.constructor</p>
+<p>4.Object.prototypy.tostring.call()</p>
+<h2 id="ts-和-js-区别"><a href="#ts-和-js-区别" class="headerlink" title="ts 和 js 区别"></a>ts 和 js 区别</h2><p>TS 和 JS 是两种不同的编程语言。<br>JS（JavaScript）是一种流行的脚本语言，它通常用于在 Web 页面上实现交互和动态效果。它是一种动态类型语言，这意味着在编译时无需指定变量类型。</p>
+<p>TS（TypeScript）是一种由 Microsoft 开发的开源编程语言，它是 JavaScript 的超集。TS 增加了类型注释、类、接口、枚举和其他面向对象编程的特性，这使得它更适合于大型项目。与 JS 不同的是，TS 编译器会在编译时检查类型错误，并提供更好的代码补全和文档。这些特性可以提高开发效率和代码质量。</p>
+<p>总的来说，TS 在类型检查、面向对象编程和开发效率方面有明显的优势。但是，它也需要一些额外的学习和配置成本。对于小型项目或初学者来说，使用 JS 可能更为方便，而对于大型项目或需要更高质量保障的企业应用，则使用 TS 更为合适。</p>
+<h2 id="http2-特点"><a href="#http2-特点" class="headerlink" title="http2 特点"></a>http2 特点</h2><p>http2 采用二进制格式传输数据，而非 HTTP 1.x 的文本格式，二进制协议解析起来更高效。 HTTP / 1 的请求和响应报文，都是由起始行，首部和实体正文（可选）组成，各部分之间以文本换行符分隔。HTTP/2 将请求和响应数据分割为更小的帧，并且它们采用二进制编码。HTTP/2 中，同域名下所有通信都在单个连接上完成，该连接可以承载任意数量的双向数据流。每个数据流都以消息的形式发送，而消息又由一个或多个帧组成。多个帧之间可以乱序发送，根据帧首部的流标识可以重新组装。</p>
+<h2 id="map-和-weakmap"><a href="#map-和-weakmap" class="headerlink" title="map 和 weakmap"></a>map 和 weakmap</h2><p>在 ES6 中 新增了 Map 和 WeakMap 这俩个类</p>
+<p>Map 用来存储映射关系键值对的，在普通对象在存储时，key 值只能为字符串或 Symbol 类型</p>
+<p>Map 储存时就可以把对象或者其他类型作为一个对象的 key 值</p>
+<p>Map 和 WeakMap 的区别：</p>
+<p>Map 在储存时可以把任何类型作为对象的 key 值，并且它的内存引用为强引用</p>
+<p>WeakMap 在储存时只能使用对象类型作为对象的 key 值，他的内存引用为弱引用，且不能被迭代</p>
+<h2 id="css-中-align-content-和-align-items-区别"><a href="#css-中-align-content-和-align-items-区别" class="headerlink" title="css 中 align-content 和 align-items 区别"></a>css 中 align-content 和 align-items 区别</h2><p>1：共同点：它们对齐方向为交叉轴</p>
+<p>2：不同点：align-content 应用于为 多行 而 align-items:应用于单行。</p>
+<h2 id="css-中-padding-和-margin-区别"><a href="#css-中-padding-和-margin-区别" class="headerlink" title="css 中 padding 和 margin 区别"></a>css 中 padding 和 margin 区别</h2><p>margin 是用来隔开元素与元素的间距；<br>padding 是用来隔开元素与内容的间隔。<br>margin 用于布局分开元素使元素与元素互不相干；<br>padding 用于元素与内容之间的间隔，让内容（文字）与（包裹）元素之间有一段“呼吸距离”。</p>
+<h2 id="css-中图片旋转-90-度用哪个属性"><a href="#css-中图片旋转-90-度用哪个属性" class="headerlink" title="css 中图片旋转 90 度用哪个属性"></a>css 中图片旋转 90 度用哪个属性</h2><p>让图片旋转 90 度的方法：利用 transform 属性来进行图片旋转，如<code>transform:rotate(90deg)</code>。</p>
+<p><code>transform</code>属性用于元素的 2D 或 3D 转换，该属性允许我们将元素旋转、缩放、移动、倾斜。</p>
+<h2 id="避免重复渲染的方式-function-组件和-class-组件两种"><a href="#避免重复渲染的方式-function-组件和-class-组件两种" class="headerlink" title="避免重复渲染的方式 function 组件和 class 组件两种"></a>避免重复渲染的方式 function 组件和 class 组件两种</h2><p>避免重新渲染的思想其实也是对比 Props 的引用。决定是否渲染！</p>
+<p>1.React.memo 的使用</p>
+<p>2.使用 memo, useMemo, useCallback</p>
+<h2 id="webpack-的原理"><a href="#webpack-的原理" class="headerlink" title="webpack 的原理"></a>webpack 的原理</h2><p>本质上,webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时,它会递归地构建一个依赖关系图(dependency graph),其中包含应用程序需要的每个模块,然后将所有这些模块打包成一个或多个 bundle。</p>
+<p>Webpack 是一个现代化的 JavaScript 应用程序打包工具，它的主要功能是将多个 JavaScript 文件打包成 一个或多个文件，以便于在浏览器中加载和运行。Webpack 的原理是将所有的模块打包成个或多个 bundle 文件，这些文件可以是 JavaScript、CSS、图片等资源文件</p>
+<p>Webpack 的工作原理可以分为四个步骤:入口、输出、加载器和插件。</p>
+<p>Webpack 需要指定一个或多个入口文件，这些文件是 Webpack 打包的起点。Webpack 会从入口文件开始递归地查找所有的依赖模块，直到找到所有的模块为止。</p>
+<p>Webpack 需要指定一个或多个输出文件，这些文件是 Webpack 包后生成的文件。Webpack 会将所有的模块打包成一个或多个 bundle 文件，并将这些文件输出到指定的日录中</p>
+<p>第二，Webpack 需要使用加载器来处理不同类型的文件。加载器是个转换器，它可以将不同类型的文件转换成 JavaScript 模块 Webpack 支持多种类型的加载器，包括 CSS 加载器、图片加载器、字体加载器等。<br>Webpack 还支持插件，浙件可以扩展 Webpack 的功能。Webpack 的插件可以用来压缩代码、优化资源、生成 HTML 文件等</p>
+<p>总的来说，Webpack 的原理是将所有的模块打包成一个或多个 bundle 文件，并将这些文件输出到指定的目录中。Webpack 通过入口、输出、加载器和插件四个步骤来实现这个过程。Webpack 的工作原理非常灵活，可以根据不同的需求进行配置，使得 Webpack 成为一个非常强大的 JavaScript 应用程序打包工具。</p>
+<h2 id="跨域怎么解决"><a href="#跨域怎么解决" class="headerlink" title="跨域怎么解决"></a>跨域怎么解决</h2><p>跨域就是当在页面上发送 ajax 请求时，由于浏览器同源策略的限制，要求当前页面和服务端必须同源，也就是协议、域名和端口号必须一致。如果协议、域名和端口号中有其中一个不一致，则浏览器视为跨域，进行拦截。</p>
+<p>常见解决跨域手段</p>
+<p>JSONP</p>
+<p>CORS</p>
+<p>搭建 Node 代理服务器</p>
+<p>Nginx 反向代理</p>
+<p>postMessage</p>
+<p>Websocket</p>
+<h2 id="git-如何做指定版本回退"><a href="#git-如何做指定版本回退" class="headerlink" title="git 如何做指定版本回退"></a>git 如何做指定版本回退</h2><p>1.回滚到指定版本</p>
+<p>首先进入项目根目录下，使用 <code>git log</code> 命令，找到需要返回的 <code>commit id</code> 号，使用 <code>git reset --hard</code> 后跟你需要的 <code>commit id</code> 号，这样你就回到了指定的版本，注意 <code>git reset --hard</code> 与 <code>git reset --soft</code> 的区别：</p>
+<p>git reset –-soft：回退到某个版本，只回退了 commit 的信息，不会恢复到 index file 一级。通常使用在当你 git commit -m “注释”提交了你修改的内容，但内容有点问题想撤销，又还要提交，就使用 soft，相当于软着路；</p>
+<p>git reset -–hard：彻底回退到某个版本，本地的源码也会变为上一个版本的内容，撤销的 commit 中所包含的更改被冲掉，相当于硬着路，回滚最彻底。</p>
+<p>2.返回到最新版本</p>
+<p>当你发现需要回滚到最新版本时，可以采用以下指今步骤</p>
+<p>git log：查看历史提交</p>
+<p>git reflog：查看每一次命令记录</p>
+<p>通过 git reflog 命令查看到之后，我们再利用 git reset 来返回到相应的版本即可，HEAD 前面的一串字符为我们简写的 ID，所以最后输入</p>
+<p>git reset –hard ca936c3 即回滚到了最新的版本号了</p>
+<h2 id="怎么改-this-指向"><a href="#怎么改-this-指向" class="headerlink" title="怎么改 this 指向"></a>怎么改 this 指向</h2><p>主要有三种方法：<code>call</code>、<code>apply</code>、<code>bind</code></p>
+<h2 id="父组件怎么调用子组件的方法"><a href="#父组件怎么调用子组件的方法" class="headerlink" title="父组件怎么调用子组件的方法"></a>父组件怎么调用子组件的方法</h2><p>父组件调子组件函数有两种情况<br>子组件无 HOC 嵌套：推荐使用 ref 直接调用<br>有 HOC 嵌套：推荐使用自定义 props 的方式</p>
+<h2 id="flex-布局怎么改主轴方向-（flex-direction）"><a href="#flex-布局怎么改主轴方向-（flex-direction）" class="headerlink" title="flex 布局怎么改主轴方向 （flex-direction）"></a>flex 布局怎么改主轴方向 （flex-direction）</h2><p>设置主轴方向<br>主轴默认是水平方向, 侧轴默认是垂直方向</p>
+<p>修改主轴方向属性: <code>flex-direction</code></p>
+<h2 id="promise-then-的参数"><a href="#promise-then-的参数" class="headerlink" title="promise .then 的参数"></a>promise .then 的参数</h2><p>then 方法是 Promise 对象中最重要的一个方法。它接收两个参数，一个是成功时的回调函数，一个是失败时的回调函数。在调用了 then 方法后，它将返回一个新的 Promise 对象，这个新 Promise 对象的状态和值是由当前 Promise 对象所完成的操作结果决定的。</p>
+<h2 id="动画旋转"><a href="#动画旋转" class="headerlink" title="动画旋转"></a>动画旋转</h2><p><code>anmimation</code>（动画离不开的）</p>
+<h2 id="ts-联合类型怎么写"><a href="#ts-联合类型怎么写" class="headerlink" title="ts 联合类型怎么写"></a>ts 联合类型怎么写</h2><p>联合类型（Union Types）表示取值可以为多种类型中的一种。联合类型使用 <code>|</code> 分隔每个类型。</p>
+<h2 id="ts-type-与-interface-的区别"><a href="#ts-type-与-interface-的区别" class="headerlink" title="ts type 与 interface 的区别"></a>ts type 与 interface 的区别</h2><p><code>interface</code> 和 <code>type</code> 都可以用来定义对象类型，那么在开发中时到底选择哪一个呢？</p>
+<p>如果是定义非对象类型，通常推荐使用 type。<br>如果是定义对象类型，那么他们有区别的：</p>
+<p>interface 可以重复的对某个接口来定义属性和方法；</p>
+<p>而 type 定义的是别名，不能重复。</p>
+<h2 id="usememo-和-usecallback-的区别"><a href="#usememo-和-usecallback-的区别" class="headerlink" title="usememo 和 usecallback 的区别"></a>usememo 和 usecallback 的区别</h2><p><code>useMemo</code> 和 <code>useCallback</code> 都是 reactHook 提供的两个 API，用于缓存数据，优化性能；两者接收的参数都是一样的，第一个参数表示一个回调函数，第二个表示依赖的数据。</p>
+<p>共同作用<br>在依赖数据发生变化的时候，才会调用传进去的回调函数去重新计算结果，起到一个缓存的作用</p>
+<p>两者的区别<br>useMemo 缓存的结果是回调函数中 return 回来的值，主要用于缓存计算结果的值，应用场景如需要计算的状态<br>useCallback 缓存的结果是函数，主要用于缓存函数，应用场景如需要缓存的函数，因为函数式组件每次任何一个 state 发生变化，会触发整个组件更新，一些函数是没有必要更新的，此时就应该缓存起来，提高性能，减少对资源的浪费；另外还需要注意的是，useCallback 应该和 React.memo 配套使用，缺了一个都可能导致性能不升反而下降。</p>
+<h2 id="父组件获取子组件的方法"><a href="#父组件获取子组件的方法" class="headerlink" title="父组件获取子组件的方法"></a>父组件获取子组件的方法</h2><p>调用方法：<br>1、类组件中的调用可以利用 React.createRef()、ref 的函数式声明或 props 自定义 onRef 属性来实现；</p>
+<p>2、函数组件、Hook 组件中的调用可以利用 useImperativeHandle 或 forwardRef 抛出子组件 ref 来实现。</p>
+<h2 id="安全问题"><a href="#安全问题" class="headerlink" title="安全问题"></a>安全问题</h2><p>1.同源策略</p>
+<p>2.xss 攻击</p>
+<p>3.HTTPS</p>
+<p>3.CSRF</p>
+<h2 id="高阶组件-1"><a href="#高阶组件-1" class="headerlink" title="高阶组件"></a>高阶组件</h2><p>高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。</p>
+<p>具体而言，高阶组件是参数为组件，返回值为新组件的函数。</p>
+<h2 id="首屏优化"><a href="#首屏优化" class="headerlink" title="首屏优化"></a>首屏优化</h2><p>一般首屏加载速度慢得原因可能如下几点：</p>
+<p>1.网络延时问题，</p>
+<p>2.资源文件体积是否过大，</p>
+<p>3.资源是否重复发送请求去加载了</p>
+<p>4.加载脚本的时候，渲染内容堵塞了</p>
+<p><code>常见的 SPA 优化方式解决方案</code></p>
+<p>1.减小入口文件体积，</p>
+<p>2.静态资源本地缓存，</p>
+<p>3.UI 框架按需引入，</p>
+<p>4.图片资源的压缩，</p>
+<p>5.组件重复打包，</p>
+<p>6.开启 GZip 打包，</p>
+<p>7.开启 SSR</p>
+<p>8.去除 loading</p>
+<h2 id="useeffect-跟-uselayouteffect-的区别"><a href="#useeffect-跟-uselayouteffect-的区别" class="headerlink" title="useeffect 跟 uselayouteffect 的区别"></a>useeffect 跟 uselayouteffect 的区别</h2><p>这两个函数的使用方式其实非常简单，他们都接受一个函数一个数组，只有在数组里面的值改变的情况下才会再次执行 effect。<br>差异：<br>useEffect 是异步执行的，而 useLayoutEffect 是同步执行的。<br>useEffect 的执行时机是浏览器完成渲染之后，而 useLayoutEffect 的执行时机是浏览器把内容真正渲染到界面之前，和 componentDidMount 等价。</p>
+<h2 id="父组件怎么使用子组件的方法"><a href="#父组件怎么使用子组件的方法" class="headerlink" title="父组件怎么使用子组件的方法"></a>父组件怎么使用子组件的方法</h2><p>1.子组件是类组件，使用 Refs</p>
+<p>2.子组件是函数组件，使用 Refs 转发</p>
+<p>2.1① 使用 forwardRef 转发 Refs 到 DOM 组件，就是将 父组件的 ref 向下传递给子组件。</p>
+<p>2.2② forwardRef 结合 useImperativeHandle 使用，自定义暴露给父组件的实例值。</p>
+<p>2.3③ 在高阶组件(HOC)中转发 Refs</p>
+<h2 id="首页渲染做过哪些优化"><a href="#首页渲染做过哪些优化" class="headerlink" title="首页渲染做过哪些优化"></a>首页渲染做过哪些优化</h2><p>前端优化大概可以有以下几个方向：</p>
+<p>网络优化</p>
+<p>页面渲染优化</p>
+<p>JS 优化</p>
+<p>图片优化</p>
+<p>webpack 打包优化</p>
+<p>React 优化</p>
+<p>Vue 优化</p>
+<p>网络优化</p>
+<h2 id="setstate-怎么同步拿数据"><a href="#setstate-怎么同步拿数据" class="headerlink" title="setstate 怎么同步拿数据"></a>setstate 怎么同步拿数据</h2><p>setState({})去更新状态时,发现更新后拿到的状态不是最新的,还是更新前的,所以 setState 是异步更新,如果想在状态更新页面完成渲染后立即做一些事情,那么这时我们就要用到 setState 的第二个参数</p>
+<h2 id="css-页面顶部底部固定，中间自适应几种方法"><a href="#css-页面顶部底部固定，中间自适应几种方法" class="headerlink" title="css 页面顶部底部固定，中间自适应几种方法"></a>css 页面顶部底部固定，中间自适应几种方法</h2><p>1，使用相对定位和绝对定位</p>
+<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* // 第一种方式 */</span>
+<span class="token selector"><span class="token class">.container</span> </span><span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/* // 使用子绝父相 */</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>vh<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#f1f3f4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">header,
+main,
+footer </span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">80</span>px<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">80</span>px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* // 设置绝对定位 */</span>
+<span class="token selector">footer </span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#f9cc9d</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Header<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#c3d08b</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#2b93f5</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Footer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<p>2，使用 flex 弹性布局，将 footer 的 margin-top 设置为 auto</p>
+<p>注意：在浏览器中，100vh 的高度包括了底部的工具栏，而我们真实需要的高度其实是浏览器的可视高度也就是 100%；<br>在使用 100vh 的时候，手机浏览器底部的操作栏可能会遮挡底部按钮；<br>所以这时页面的高度应该使用 100%；</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.container</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>vh<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#f1f3f4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">header,
+main,
+footer </span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">80</span>px<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">80</span>px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">footer </span><span class="token punctuation">{</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-HTML"><code class="language-HTML">
+        <div class="container">
+            <header style="background: #f9cc9d">Header</header>
+            <main style="background: #c3d08b">Content</main>
+            <footer style="background: #2b93f5">Footer</footer>
+        </div></code></pre>
+<p>3，通过 css 内置函数 calc()动态计算内容的高度</p>
+<p>min-height: calc(100vh - 130px); 130 其实就是 header 和 footer 的高度；</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.container</span> </span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>vh<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">header,
+main,
+footer </span><span class="token punctuation">{</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">header </span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">80</span>px<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">80</span>px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">footer </span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">main </span><span class="token punctuation">{</span>
+  <span class="token property">min-height</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token number">100</span>vh - <span class="token number">130</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-HTML"><code class="language-HTML">    <div class="container">
+        <header style="background: #f9cc9d">Header</header>
+        <main style="background: #c3d08b">Content</main>
+        <footer style="background: #2b93f5">Footer</footer>
+    </div></code></pre>
+<h2 id="文字超出部分变成省略号的三种方式"><a href="#文字超出部分变成省略号的三种方式" class="headerlink" title="文字超出部分变成省略号的三种方式"></a>文字超出部分变成省略号的三种方式</h2><p>1.单行文本溢出显示省略号</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/*强制文本在一行内显示*/</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>2.多行文本溢出显示省略号</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* 将对象作为弹性伸缩盒子模型显示 */</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> -webkit-box<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* 限制在一个块元素显示的文本的行数 */</span>
+  <span class="token comment" spellcheck="true">/* -webkit-line-clamp 其实是一个不规范属性，使用了WebKit的CSS扩展属性，该方法适用于WebKit浏览器及移动端；*/</span>
+  <span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* 设置或检索伸缩盒对象的子元素的排列方式 */</span>
+  <span class="token property">-webkit-box-orient</span><span class="token punctuation">:</span> vertical<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>js 方法实现</p>
+<p>第一种方法用到的是 substring(from, to )方法，括号内第一个参数是索引起始值，第二个参数是索引的结束值。substring()从字符串中抽取一个子串，然后赋值给 textCon，最后再用 concat()连接省略号。需要注意的是 substring()的返回值是它本身（抽取的值），字符串的第一个索引值是 0。</p>
+<pre class=" language-js"><code class="language-js">textCon <span class="token operator">=</span> textCon<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+textEnd <span class="token operator">=</span> textCon<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token string">"……"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>第二种方法的思路是：先用 split(“”)将字符串转化为数组，split(separator)将字符串分割成数组，默认用逗号分隔，对本身字符串没有产生影响；转成数组后我们再用 splice(开始的索引, 要删除的个数, 插入的元素)对后面多余的文本进行删除；最后用 join(“”)把数组连接成字符串，后面加上 concat(“……”)。这里需要注意的是 splice()的返回值是改变后的数组。</p>
+<pre class=" language-js"><code class="language-js">textCon <span class="token operator">=</span> textCon<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//将字符串转化为数组</span>
+textCon <span class="token operator">=</span> textCon<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">,</span> textCon<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+textEnd <span class="token operator">=</span> textCon<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token string">"……"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+text<span class="token punctuation">.</span>innerText <span class="token operator">=</span> textEnd<span class="token punctuation">;</span></code></pre>
+<p>第三种则是用到 replace()字符串替换方法，它的思路很简单，就是把后面多余的文本字符串替换为空。这里需要注意的地方是：用 for 语句进行循环，每将一个字符替换为空后，它后面的字符就会自动往前移，所以我们只要在某个固定的位置将字符替换为空，后面的字符就会顶上来，就像流水线一样。这是三种方法里面最简单的一种。</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> textCon<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">></span> <span class="token number">80</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  textCon <span class="token operator">=</span> textCon<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>textCon<span class="token punctuation">[</span><span class="token number">80</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+textEnd <span class="token operator">=</span> textCon<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token string">"……"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+text<span class="token punctuation">.</span>innerText <span class="token operator">=</span> textEnd<span class="token punctuation">;</span></code></pre>
+<h2 id="实现字符串反转"><a href="#实现字符串反转" class="headerlink" title="实现字符串反转"></a>实现字符串反转</h2><p>使用数组的 reverse()方法</p>
+<p>步骤如下：</p>
+<p>将字符串转为数组<br>使用数组的 reverse()方法进行反转<br>使用数组的 join()方法将数组转化为字符串<br>示例代码如下：</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">"Hello World!"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> reversedStr <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>reversedStr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出：'!dlroW olleH'</span></code></pre>
+<h2 id="字符串替换"><a href="#字符串替换" class="headerlink" title="字符串替换"></a>字符串替换</h2><p>1.使用 replace()方法.</p>
+<p>replace()方法用于在字符串中查找并替换指定的子串。它接受两个参数：第一个参数是需要替换的子串或用于匹配子串的正则表达式，第二个参数是需要替换成的字符串。</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> str1 <span class="token operator">=</span> <span class="token string">"hello world"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> str2 <span class="token operator">=</span> str1<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"world"</span><span class="token punctuation">,</span> <span class="token string">"javascript"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// hello javascript</span></code></pre>
+<p>2.使用正则表达式替换</p>
+<p>如果需要使用正则表达式进行替换，可以使用 replace()方法的第一个参数传入一个正则表达式。例如：</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> str1 <span class="token operator">=</span> <span class="token string">"2022-02-22"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> str2 <span class="token operator">=</span> str1<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/-/g</span><span class="token punctuation">,</span> <span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2022/02/22</span></code></pre>
+<p>3.使用 replaceAll()方法</p>
+<p>从 ECMAScript 2021 规范开始，JavaScript 原生支持了 replaceAll()方法。它也是用于在字符串中替换指定的子串，但是相比于 replace()方法，它可以直接替换所有匹配的子串，而不需要使用正则表达式。</p>
+<p>例如：</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> str1 <span class="token operator">=</span> <span class="token string">"hello world"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> str2 <span class="token operator">=</span> str1<span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token string">"o"</span><span class="token punctuation">,</span> <span class="token string">"O"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// hellO wOrld</span></code></pre>
+<p>注意，由于 replaceAll()方法目前还不是所有浏览器都支持，因此在实际开发中需要进行兼容性处理。</p>
+<h2 id="async-里面多个-await，如何优化"><a href="#async-里面多个-await，如何优化" class="headerlink" title="async 里面多个 await，如何优化"></a>async 里面多个 await，如何优化</h2><pre class=" language-JS"><code class="language-JS"> async initData() {
+    const cache = await this.cachePromise;  // 出错了
+    const cache2 = await this.cachePromise2;  //不执行
+    const cache3 = await this.cachePromise3;  //不执行
+    const cache4 = await this.cachePromise4;  //不执行
+  }
+
+// 修改后
+ async initData() {
+    try {
+       const cache = await this.cachePromise;  // 出错了
+       const cache2 = await this.cachePromise2;  //执行
+       const cache3 = await this.cachePromise3;  //执行
+       const cache4 = await this.cachePromise4;  //执行
+     } catch(err) {
+       console.log(err)
+     }
+  }</code></pre>
+<h2 id="使用-promise-封装-Ajax-请求"><a href="#使用-promise-封装-Ajax-请求" class="headerlink" title="使用 promise 封装 Ajax 请求"></a>使用 promise 封装 Ajax 请求</h2><pre class=" language-JS"><code class="language-JS">function myaxios(url) {
+    var p1 = new Promise(function (n1, n2) {
+        var xhr = new XMLHttpRequest() || new ActiveXObject("Microsoft.XMLHTTP")
+        xhr.open("GET", url, true)
+        xhr.send()
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                n1(xhr.responseText)
+            } else if (xhr.readyState == 4 && xhr.status == 404) {
+                n2(xhr.responseText)
+            }
+        }
+    })
+    return p1
+}</code></pre>
+<p>调用时的方法：</p>
+<pre class=" language-JS"><code class="language-JS"><button onclick="fn()">ajax请求</button>
+
+    <script>
+        function fn() {
+            var url = "http://192.168.0.114:8081/ajax1" //要请求的目标网址
+            myaxios(url).then((res) => {
+                console.log(res);
+            })
+        }
+    </script></code></pre>
+<h2 id="实现瀑布流-瀑布流布局常见场景用于展示照片"><a href="#实现瀑布流-瀑布流布局常见场景用于展示照片" class="headerlink" title="实现瀑布流 (瀑布流布局常见场景用于展示照片)"></a>实现瀑布流 (瀑布流布局常见场景用于展示照片)</h2><p>瀑布流布局是一种新型的布局方式，可以将大小不一的图片完整的显示在页面上，并且在杂乱的布局中保持着一定的美感，</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>con<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../img/1.jpeg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../img/2.jpeg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../img/3.jpeg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../img/4.jpeg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../img/5.jpeg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<p>1.CSS 布局<br>使用 column-count 属性</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.container</span> </span><span class="token punctuation">{</span>
+  <span class="token property">column-count</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* 想要排成的列数 */</span>
+  <span class="token property">column-gap</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.item</span> img </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>2.使用 flex 布局</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.container</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+  <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* 需要指定高度 */</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">800</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">25%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.item</span> img </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="小程序的登录流程"><a href="#小程序的登录流程" class="headerlink" title="小程序的登录流程"></a>小程序的登录流程</h2><p>1.通过 wx.login() 获取到用户的 code 判断用户是否授权读取用户信息，调用 wx.getUserInfo 读取用户数据。</p>
+<p>2.由于小程序后台授权域名无法授权微信的域名，所以需要自身后端调用微信服务器获取用户信息。</p>
+<p>3.通过 wx.request() 方法请求业务方服务器，后端把 appid , appsecret 和 code 一起发送到微信服务器。<br>appid 和 appsecret 都是微信提供的，可以在管理员后台找到。</p>
+<p>4.微信服务器返回了 openid 及本次登录的会话密钥 session_key。</p>
+<p>5.后端从数据库中查找 openid ，如果没有查到记录，说明该用户没有注册，如果有记录，则继续往下走。</p>
+<p>6.session_key 是对用户数据进行加密签名的密钥。为了自身应用安全，session_key 不应该在网络上传输。</p>
+<p>7.然后生成 session 并返回给小程序。</p>
+<p>8.小程序把 session 存到 storage 里面。</p>
+<p>9.下次请求时，先从 storage 里面读取，然后带给服务端。</p>
+<p>10.服务端对比 session 对应的记录，然后校验有效期。</p>
+<p>登录逻辑： 1.调用 wx.login() 获取 临时登录凭证 code，有效期为 5 分钟；（临时登录凭证 code 只能使用一次）</p>
+<p>2.将临时 code 传到我们的后端，后端调用 auth.code2Session 接口，换取用户唯一标识 OpenID 和 会话密钥 session_key；（ openid 是用户唯一标识，session_key 能保证当前用户进行会话操作的有效性）</p>
+<p>注意：获取 session_key 出于安全性的考虑，要在后端调用。如果我们在前端通过 request 调用此接口，就不可避免的需要将我们小程序的 appid 、secret 和服务端下发的 session_key 暴露在外部，会给我们的业务安全带来极大的风险。<br>session_key 拥有一定的时效性。用户越久未使用小程序，用户登录态越有可能失效。反之如果用户一直在使用小程序，则用户登录态一直保持有效。具体时效逻辑由微信维护，对开发者透明。开发者需要调用 wx.checkSession 接口检测当前用户登录态是否有效。</p>
+<p>3.后端自定义新的密钥并关联返回的 session_key 和 openid，将新的密钥返给前端，前端将其存储在 storage 中。（会话密钥 session_key 是对用户数据进行 加密签名 的密钥。为了应用自身的数据安全，开发者服务器不应该把会话密钥下发到小程序，也不应该对外提供这个密钥，所以要定义新的密钥）。<br>之所以存在 storage 中，是因为小程序没有 cookie，相应的后端 set-cookie 在小程序中不起作用。</p>
+<p>4.前端发送请求的时候，带着密钥，后端根据密钥识别用户身份，返回数据。</p>
+<h2 id="bff-项目来处理什么问题"><a href="#bff-项目来处理什么问题" class="headerlink" title="bff 项目来处理什么问题"></a>bff 项目来处理什么问题</h2><p>BFF（Backend-for-Frontend）中间层是一种架构模式，主要用于解决前后端协作和微服务架构中的数据聚合问题。在这种架构下，前端应用程序不直接与后端服务通信，而是通过一个专门为前端定制的 BFF 中间层与后端服务交互。BFF 中间层负责与多个后端服务进行通信，聚合数据，并将结果返回给前端应用程序。</p>
+<p>BFF 中间层的主要作用是：</p>
+<p>为前端应用程序提供一个统一的 API 接口，简化前端应用程序的开发和维护。</p>
+<p>负责与多个后端服务进行通信，聚合数据，降低前端应用程序的复杂度。<br>提供负载均衡、服务发现、缓存、错误处理和重试策略等功能，提高系统的性能和可用性。</p>
+<h2 id="空值合并运算符-‘-’与’-’运算符区别"><a href="#空值合并运算符-‘-’与’-’运算符区别" class="headerlink" title="空值合并运算符 ‘??’与’||’运算符区别"></a>空值合并运算符 ‘??’与’||’运算符区别</h2><p>||运算符和??运算符在链式使用方法中有相同的地方，例如：</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> first <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> secon <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> third <span class="token operator">=</span> <span class="token string">"Beautiful Girl"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> r1 <span class="token operator">=</span> first <span class="token operator">?</span><span class="token operator">?</span> secon <span class="token operator">?</span><span class="token operator">?</span> third <span class="token operator">?</span><span class="token operator">?</span> <span class="token string">"undefined"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//(1)</span>
+<span class="token keyword">let</span> r2 <span class="token operator">=</span> first <span class="token operator">||</span> secon <span class="token operator">||</span> thrid <span class="token operator">||</span> <span class="token string">"undefined"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//(2)</span></code></pre>
+<p>上述代码中，(1)(2)两行的作用是完全相同的，但是相对于共同点，二者的区别更大。</p>
+<p>从定义上：</p>
+<p>||返回表达式中的第一个真值；<br>??返回表达式中的第一个已定义值；<br>二者的区别就在于真值和已定义值的区别上：</p>
+<p>||无法区分 0、false、””和 null/undefined，对于||而言，它们都是一样的。</p>
+<p>??可以区分 null/undefined 和其他值的区别。</p>
+<p>所以，在处理代码时，分真假用||，分有无用??。</p>
+<h2 id="微前端的理解"><a href="#微前端的理解" class="headerlink" title="微前端的理解"></a>微前端的理解</h2><p>概念：微前端是一种类似于微服务的架构。它使得各个前端应用可以独立运行、独立开发、独立部署，微前端就是将不同的功能按照不同的维度拆分成多个子应用。通过主应用来加载这些子应用（微前端的核心在于拆，拆完之后再合）</p>
+<p>技术框架：目前常用的微前端技术框架有 single-spa 以及基于 single-spa 开发的微前端实现库 qiankun</p>
+<p>使用场景：</p>
+<p>1.我们需要兼容遗留的系统时</p>
+<p>2.当项目需要聚合应用时</p>
+<p>3.当不同的团队开发同一个应用，所选技术栈不同时</p>
+<h2 id="HTML-lt-iframe-gt-标签"><a href="#HTML-lt-iframe-gt-标签" class="headerlink" title="HTML <iframe>标签"></a>HTML <code>&lt;iframe&gt;</code>标签</h2><p>iframe 元素会创建包含另外一个文档的内联框架（即行内框架）。所有浏览器都支持 <code>&lt;iframe&gt;</code> 标签。您可以把需要的文本放置在 <code>&lt;iframe&gt;</code> 和 <code>&lt;/iframe&gt;</code> 之间，这样就可以应对无法理解 iframe 的浏览器。使用 iframe，可以配置不同的 src 加载不同的子应用页面</p>
+<h2 id="js-中的-set-与-map"><a href="#js-中的-set-与-map" class="headerlink" title="js 中的 set 与 map"></a>js 中的 set 与 map</h2><p>简述：Set 和 Map 主要的应用场景在于 数据重组 和 数据储存。Set 是一种叫做集合的数据结构，Map 是一种叫做字典的数据结构。</p>
+<p>Set：<br>成员唯一、无序且不重复。<br>[value, value]，键值与键名是一致的（或者说只有键值，没有键名）。<br>可以遍历，方法有：add、delete、has。</p>
+<p>Map：<br>本质上是键值对的集合，类似集合。<br>可以遍历，方法很多可以跟各种数据格式转换。</p>
+<h2 id="组件封装如何做的？封装时考虑的因素？"><a href="#组件封装如何做的？封装时考虑的因素？" class="headerlink" title="组件封装如何做的？封装时考虑的因素？"></a>组件封装如何做的？封装时考虑的因素？</h2><p>一般步骤如下： 1.创建一个新的 Vue 单文件组件（.vue 文件），并命名为你的组件名，例如 MyComponent.vue。</p>
+<p>2 在组件文件中，使用 <code>&lt;template&gt;</code> 标签定义组件的模板结构，使用 <code>&lt;script&gt;</code> 标签定义组件的逻辑，使用 <code>&lt;style&gt;</code> 标签定义组件的样式。</p>
+<p>3 在 <code>&lt;script&gt;</code> 标签中，使用 export default 导出一个 Vue 组件对象。</p>
+<p>4 在组件对象中，定义组件的属性（props），数据（data），方法（methods），生命周期钩子（lifecycle hooks）等。</p>
+<p>5 如果需要，可以在组件中引入其他的子组件或插件。</p>
+<p>6 在需要使用该组件的地方，使用 import 语句导入该组件，然后在父组件的模板中使用该组件的标签。</p>
+<p>封装时考虑的因素</p>
+<p>1.我们需要考虑到未来的可维护性和复用性，这时就需要抽象出通用的逻辑或者功能，以便在不同的项目中使用</p>
+<p>2.在开发组件时，需要将组件内部的数据和展示进行分离，以便组件的复用性和可维护性更高。通过 props 属性将外部的数据传递给组件，以便组件可以根据外部的数据进行展示。</p>
+<p>3.抽象组件样式：在进行组件封装时，我们需要考虑到组件的样式问题</p>
+<h2 id="http-常见状态码有哪些？"><a href="#http-常见状态码有哪些？" class="headerlink" title="http 常见状态码有哪些？"></a>http 常见状态码有哪些？</h2><p>一、1 开头的状态码(信息类)</p>
+<p>100，接受的请求正在处理，信息类状态码</p>
+<p>二、2 开头的状态码(成功类)</p>
+<p>2xx(成功)表示成功处理了请求的状态码<br>200(成功)服务器已成功处理了请求。</p>
+<p>三、3 开头的状态码(重定向)</p>
+<p>3xx(重定向)表示要完成请求，需要进一步操作。通常这些状态代码用来重定向。<br>301，永久性重定向，表示资源已被分配了新的 URL<br>302，临时性重定向，表示资源临时被分配了新的 URL<br>303，表示资源存在另一个 URL，用 GET 方法获取资源<br>304，(未修改)自从上次请求后，请求网页未修改过。服务器返回此响应时，不会返回网页内容</p>
+<p>四、4 开头的状态码(客户端错误)</p>
+<p>4xx(请求错误)这些状态码表示请求可能出错，妨碍了服务器的处理<br>400(错误请求)服务器不理解请求的语法<br>401 表示发送的请求需要有通过 HTTP 认证的认证信息<br>403(禁止)服务器拒绝请求<br>404(未找到)服务器找不到请求网页</p>
+<p>五、5 开头的状态码(服务器错误)</p>
+<p>5xx(服务器错误)这些状态码表示服务器在尝试处理请求时发生内部错误。这些错误可能是服务器本身的错误，而不是请求的错误<br>500，(服务器内部错误)服务器遇到错误，无法完成请求<br>503，表示服务器处于停机维护或超负载，无法处理请求</p>
+<h2 id="flex-1-和-flex-auto-的区别，flex-是哪些属性的缩写？"><a href="#flex-1-和-flex-auto-的区别，flex-是哪些属性的缩写？" class="headerlink" title="flex:1 和 flex:auto 的区别，flex 是哪些属性的缩写？"></a>flex:1 和 flex:auto 的区别，flex 是哪些属性的缩写？</h2><p>flex:1 和 flex:auto 区别：规则基准使用值不同、子元素不同、包裹块不同。</p>
+<p>flex: 1=== flex: 1 1 0;</p>
+<p>在说 flex:1 和 flex:auto 区别之前先回顾 flex:0 1 atuo;</p>
+<p>从默认值上可以看出它有三个属性，分别是 flex-grow、flex-shrink、flex-basis</p>
+<p>flex-grow:项目的放大比例，默认为 0，如果存在剩余空间，不放大</p>
+<p>flex-shrink:项目的缩小比例，默认为 1，如果空间不足，会适当缩小</p>
+<p>flex-basis:在分配空间之前，项目的主轴空间，相当于我们设置的 width，</p>
+<h2 id="Vue-的生命周期有哪些？created-和-mounted-区别？"><a href="#Vue-的生命周期有哪些？created-和-mounted-区别？" class="headerlink" title="Vue 的生命周期有哪些？created 和 mounted 区别？"></a>Vue 的生命周期有哪些？created 和 mounted 区别？</h2><p>beforeCreate( 创建前 )：el 和 data 并未初始化，因此无法访问 methods， data， computed 等上的方法和数据，无法使用 this。</p>
+<p>created ( 创建后 ）：完成了 data 数据的初始化，el 没有。 主要用来初始化一些数据。</p>
+<p>beforeMount：完成了 el 和 data 初始化，$el 属性已存在，是虚拟 dom，只是数据未挂载到模板中（没有挂在 html 到页面上）。</p>
+<p>mounted：dom 操作在此时能正常进行。此时一般可以做一些 ajax 操作，mounted 只会执行一次。Dom 操作一般是在 mounted 钩子函数中进行的</p>
+<p>beforeUpdate （更新前）：在数据更新之前被调用，此时数据是新的，页面依旧还是旧的</p>
+<p>updated （更新后）：此时组件 DOM 已经更新，所以可以执行依赖于 DOM 的操作</p>
+<p>beforeDestrioy （销毁前）：在实例销毁之前调用，实例仍然完全可用,一般在这一步做一些重置的操作，比如清除掉组件中的定时器 和 监听的 dom 事件<br>destroyed（销毁后）:执行 destroy 方法后，对 data 的改变不会再触发周期函数，此时的 vue 实例已经解除了事件监听以及和 dom 的绑定，但是 dom 结构依然存在。</p>
+<p>区别：</p>
+<p>created:在模板渲染成 html 前调用，即通常初始化某些属性值，然后再渲染成视图。</p>
+<p>mounted:在模板渲染成 html 后调用，通常是初始化页面完成后，再对 html 的 dom 节点进行一些需要的操作。</p>
+<h2 id="Vue3-的生命周期钩子函数的变化-（6-个）"><a href="#Vue3-的生命周期钩子函数的变化-（6-个）" class="headerlink" title="Vue3 的生命周期钩子函数的变化 （6 个）"></a>Vue3 的生命周期钩子函数的变化 （6 个）</h2><p>在 Vue3 中，一些常见的钩子函数发生了变化。例如，vue2 中的 created 和 beforeCreate 钩子函数被替换为了 setup()，并且 setup()在二者之前执行。beforeMount 和 mounted 函数被替换成了 onBeforeMount 和 onMounted。beforeUpdate 和 update 被替换为 onBeforeUpdate 和 onupdate。beforeDestroy 和 destroyed 被替换为 beforeUnmount 和 unmounted。这些钩子函数的执行顺序与 Vue2 的版本相同，但是有所不同的是，在 Vue3 中，它们是使用 ES6 类定义的。</p>
+<h2 id="写一个对象，这个对象还得包含一个取消定时器的方法，-需要从-0-100-依次定时打印出来"><a href="#写一个对象，这个对象还得包含一个取消定时器的方法，-需要从-0-100-依次定时打印出来" class="headerlink" title="写一个对象，这个对象还得包含一个取消定时器的方法， 需要从 0-100 依次定时打印出来"></a>写一个对象，这个对象还得包含一个取消定时器的方法， 需要从 0-100 依次定时打印出来</h2><pre class=" language-JS"><code class="language-JS">let i=0
+let timer=setInterval(() => {
+    console.log('当前值为 :>> ', i++);
+    if(i>100){
+        clearInterval(i)
+    }
+
+
+}, 1000);</code></pre>
+<h2 id="数组的去重，排序，倒叙"><a href="#数组的去重，排序，倒叙" class="headerlink" title="数组的去重，排序，倒叙"></a>数组的去重，排序，倒叙</h2><p>数组的去重 1.使用 set 结构去重</p>
+<p>2.使用 for+indexOf 方法去重</p>
+<p>3.使用 for+includes 方法去重</p>
+<p>排序：sort</p>
+<pre class=" language-JS"><code class="language-JS">var arr2 = [20,13,11,8,0,11];</code></pre>
+<p>按升序排列，前减后</p>
+<pre class=" language-JS"><code class="language-JS">arr2.sort(function(a,b){
+    //a,b表示相邻的两个元素
+    //若返回值>0,数组元素将按升序排列
+    //若返回值<0,数组元素将按降序排列
+    return a-b;
+});
+console.log(arr2); //[0,8,11,11,13,20]; 新数组按升序排列</code></pre>
+<p>按降序排列，后减前</p>
+<pre class=" language-JS"><code class="language-JS">arr2.sort(function(a,b){
+    //a,b表示相邻的两个元素
+    //若返回值>0,数组元素将按升序排列
+    //若返回值<0,数组元素将按降序排列
+    return b-a;
+});
+console.log(arr2); //[20,13,11,11,8,0]; 新数组按降序排列</code></pre>
+<p>css 样式，同一行中三个元素平均分布</p>
+<p>采用父盒子设置弹性盒布局，子盒子则 flex:1,等比均分</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>son<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>son<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>son<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.son</span> </span><span class="token punctuation">{</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="css-九宫格布局"><a href="#css-九宫格布局" class="headerlink" title="css 九宫格布局"></a>css 九宫格布局</h2><pre class=" language-HTML"><code class="language-HTML"><div class="box">
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+</div>
+
+公共样式：
+<style>
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+      text-align: center;
+    border-radius: 5px;
+    background: skyblue;
+}
+</style>
+</code></pre>
+<p>flex 实现</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">ul </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">li </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">30%</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">30%</span><span class="token punctuation">;</span>
+  <span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">5%</span><span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">5%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">li<span class="token pseudo-class">:nth-of-type(3n)</span> </span><span class="token punctuation">{</span>
+  <span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">li<span class="token pseudo-class">:nth-of-type(n + 7)</span> </span><span class="token punctuation">{</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>（2）grid 实现<br>grid 布局相对于 flex 布局来说，实现九宫格就更加容易了，只需要设置几个属性即可：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">ul </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token number">30%</span> <span class="token number">30%</span> <span class="token number">30%</span><span class="token punctuation">;</span>
+  <span class="token property">grid-template-rows</span><span class="token punctuation">:</span> <span class="token number">30%</span> <span class="token number">30%</span> <span class="token number">30%</span><span class="token punctuation">;</span>
+  <span class="token property">grid-gap</span><span class="token punctuation">:</span> <span class="token number">5%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="浏览器打开两个标签页-cookie-是否一样"><a href="#浏览器打开两个标签页-cookie-是否一样" class="headerlink" title="浏览器打开两个标签页,cookie 是否一样"></a>浏览器打开两个标签页,cookie 是否一样</h2><p>两个页签中保存的 cookie 都是一样的,cookie 在一个浏览器下同一个域名下是全部共享一致的，和页签没任何关系的。</p>
+<h2 id="同一个浏览器的两个页面是一个-session-吗-不一定"><a href="#同一个浏览器的两个页面是一个-session-吗-不一定" class="headerlink" title="同一个浏览器的两个页面是一个 session 吗? 不一定"></a>同一个浏览器的两个页面是一个 session 吗? 不一定</h2><p>同一个浏览器的两个页面是不一定是一个 session 的。如果是在同一个浏览器内打开两个标签，那么这两个标签的页面是一个 session，但是用同一个浏览器打开两个不同的窗口页面的话，那么两个页面不是一个 session。</p>
+<h2 id="浏览器打开两个标签页-localstorage-是否一样"><a href="#浏览器打开两个标签页-localstorage-是否一样" class="headerlink" title="浏览器打开两个标签页,localstorage 是否一样"></a>浏览器打开两个标签页,localstorage 是否一样</h2><p>IE、Edge localstorage 两个页签的值不一致的问题</p>
+<p>localstorage 本是浏览器的属性，chrome 下会多个页签共享该属性值，一个变更，其他页签下取值也会取得变更后的最新值</p>
+<p>IE、Edge 下两个页签，一个发生了变化，另外一个没有同步，经查找，需要手动对 localstorage 对象触发 change 事件，随便给某个属性设置一个值，原来的属性值也会跟着更新<br>localStorage.setItem(**,);<br>随意设置变量，只要触发 localStorge 对象就可以</p>
+<h2 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call()"></a>Object.prototype.toString.call()</h2><p>1.用处：该方法是用来监测数据类型的一种好方法</p>
+<pre class=" language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>toString<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>undefined<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [object Undefined]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>toString<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [object Null]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>toString<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [object Date]</span></code></pre>
+<p>检测原理：</p>
+<p>Object 对象本身就有一个 toString()方法，返回的是当前对象的字符串形式，原型上的 toString()返回的才是我们真正需要的包含对象数据类型的字符串。至于 call，就是改变对象的 this 指向，当一个对象想调用另一个对象的方法，可以通过 call 或者 apply 改变其 this 指向，将其 this 指向拥有此方法的对象，就可以调用该方法了。</p>
+<h2 id="vue-响应式原理"><a href="#vue-响应式原理" class="headerlink" title="vue 响应式原理"></a>vue 响应式原理</h2><p>vue 响应式也叫作数据双向绑定，大致原理阐述：</p>
+<p>​ 首先我们需要通过 Object.defineProperty()方法把数据(data)设置为 getter 和 setter 的访问形式，这样我们就可以在数据被修改时在 setter 方法设置监视修改页面信息，也就是说每当数据被修改，就会触发对应的 set 方法，然后我们可以在 set 方法中去调用操作 dom 的方法。</p>
+<p>​ 此外，如果页面有 input 用 v-model 绑定数据，我们需要在这种绑定了 data 的 input 元素上添加监听，添加 input 事件监听，每当 input 事件被触发时，就修改对应的 data。</p>
+<h2 id="map-和-object-的区别"><a href="#map-和-object-的区别" class="headerlink" title="map 和 object 的区别"></a>map 和 object 的区别</h2><p>区别：<br>1、Map 的键可以是任意值，而 Object 的键必须是一个 String 或是 Symbol。</p>
+<p>2、Map 中的 key 是有序的，而 Object 的键是无序的。</p>
+<p>3、Map 的键值对个数可以轻易地通过 size 属性获取，而 Object 的键值对个数只能手动计算。</p>
+<p>4、Map 可以直接被迭代，而 Object 不可以直接被迭代。</p>
+<p>5、Map 在频繁增删键值对的场景下表现更好，而 Object 的效率比较差。</p>
+<h2 id="Promise-大致的工作流程是"><a href="#Promise-大致的工作流程是" class="headerlink" title="Promise 大致的工作流程是"></a>Promise 大致的工作流程是</h2><p>创建 Promise 对象 =&gt; 进入等待处理阶段 Pending</p>
+<p>处理完成后，切换到 Fulfilled 状态／ Rejected 状态</p>
+<p>根据状态，执行 then 方法／执行 catch 方法 内的回调函数</p>
+<h2 id="pinia-和-vuex-区别"><a href="#pinia-和-vuex-区别" class="headerlink" title="pinia 和 vuex 区别"></a>pinia 和 vuex 区别</h2><p>Vuex 和 Pinia 都是 Vue.js 中常用的状态管理库，用于在项目中实现集中式的状态管理。</p>
+<p>虽然两者都可以实现对状态的管理，但是在使用上还是有一些区别：</p>
+<p>代码规模：vuex 可以轻松地处理大型应用程序的状态管理，而是 pinia 则是更专注于小型中型的项目。</p>
+<p>状态访问方式：在 vuex 中，我们可以通过 mapState、mapGetters、mapMutations 和 mapActions 方便地将 store 中的状态映射到组件的计算属性和方法中，而在 pinia 中，我们使用内部提供的 useStore hook 来获取 store 实例，并直接访问 store 中的状态和操作函数</p>
+<p>API 设计：vuex 遵循了 Flux 模式中的单向数据流理念，其中包括 state（状态）、mutations（变更）和 actions（行为）等概念；pinia 则采用了更加简化 API 设计，主要包含 state 跟 getters、actions 和 mutations 这三部分内容，同时也大力推广 Typescript 使用，并且底层采用了 proxy 来优化性能</p>
+<p>运行依赖：vuex 依赖于 vue 本身，需要引入 Vue.use(Vuex)才能在项目中使用它；而 pinia 是完全独立于 vue 的，不需要再进行任何额外操作就可以安装和使用它。</p>
+<p>综上所述，Vuex 更适用于大型应用程序的状态管理，而 Pinia 更适用于小型中型项目，同时在 API 设计上也有着不少的差异。但两者都可以为 Vue.js 中的状态管理提供便利，并根据个人需求和喜好进行选择。</p>
+<h2 id="什么是事件循环？"><a href="#什么是事件循环？" class="headerlink" title="什么是事件循环？"></a>什么是事件循环？</h2><p>事件循环是 JavaScript 中一种异步执行机制，它的作用是协调和管理各种异步任务的执行顺序，保证 JavaScript 代码的执行顺序和预期一致。</p>
+<p>整体的 script(作为第一个宏任务)开始执行的时候，会把所有代码分为两部分：“同步任务”、“异步任务”；</p>
+<p>同步任务会直接进入主线程依次执行；</p>
+<p>异步任务会再分为宏任务(进入宏任务队列) 和 微任务(进入微任务队列)。</p>
+<p>当主线程内的任务执行完毕（主线程为空时），会检查微任务的任务队列，如果有任务，就进入主线程全部执行，如果没有就从宏任务队列读取下一个宏任务执行；</p>
+<p>每执行完一个宏任务就清空一次微任务队列，此过程会不断重复，这就是 Event Loop；</p>
+<p>宏任务</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setImmediate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ajax<span class="token punctuation">;</span></code></pre>
+<p>事件绑定</p>
+<pre class=" language-js"><code class="language-js">微任务
+<span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">)</span>后的then与<span class="token keyword">catch</span>函数
+<span class="token keyword">new</span> <span class="token class-name">MutaionObserver</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+process<span class="token punctuation">.</span>nextTick（Nodejs）</code></pre>
+<p>微任务和宏任务的执行顺序是先执行同步任务，先执行同步后异步，异步分为宏任务和微任务两种，异步遇到微任务先执行微任务，执行完后如果没有微任务，就执行下一个宏任务。</p>
+<h2 id="ES6-的新特性"><a href="#ES6-的新特性" class="headerlink" title="ES6 的新特性"></a>ES6 的新特性</h2><p>1.let 和 const 声明变量的方式，取代了 var 关键字。</p>
+<p>2.箭头函数（Arrow Function），简化了函数的书写方式。</p>
+<p>3.模板字符串（Template String），允许在字符串中使用变量和表达式，而不需要使用字符串连接符号。</p>
+<p>4.解构赋值（Destructuring Assignment），允许从数组和对象中提取值并赋值给变量。</p>
+<p>5.默认参数（Default Parameter），在定义函数时可以给参数设置默认值。</p>
+<p>6.扩展操作符（Spread Operator），可以在函数调用时展开数组或对象。</p>
+<p>7.类（Class），引入了面向对象编程中类的概念。</p>
+<p>8.模块化（Module），提供了一种组织代码的方式，可以将代码分割成独立的模块，方便重用和维护。</p>
+<p>9.Promise，用于处理异步操作，避免回调地狱的问题。</p>
+<p>10.for…of 循环，用于遍历可迭代对象（如数组、Map 和 Set）中的元素。</p>
+<p>11.Symbol，引入了一种新的数据类型，用于创建唯一的属性键。</p>
+<p>12.Map 和 Set，引入了两种新的数据结构，分别用于存储键值对和唯一值。</p>
+<p>13.Proxy，允许在对象和函数调用等操作前后添加自定义的行为。</p>
+<p>14.Reflect，提供了一组可以操作对象的内置方法，可以替代一些对象方法（如 Object.defineProperty）的实现。</p>
+<p>Promise.allSettled，用于处理多个 Promise 的状态并返回一个包含每个 Promise 状态的数组。</p>
+<h2 id="箭头函数与普通函数的区别"><a href="#箭头函数与普通函数的区别" class="headerlink" title="箭头函数与普通函数的区别"></a>箭头函数与普通函数的区别</h2><p>1、外形不同：箭头函数使用箭头定义，普通函数中没有。</p>
+<p>2、 箭头函数全都是匿名函数：普通函数可以有匿名函数，也可以有具名函数</p>
+<p>3、箭头函数不能用于构造函数：普通函数可以用于构造函数，以此创建对象实例。</p>
+<p>4、箭头函数中 this 的指向不同：在普通函数中，this 总是指向调用它的对象，如果用作构造函数，它指向创建的对象实例。</p>
+<p>5、箭头函数不具有 arguments 对象：每一个普通函数调用后都具有一个<br>arguments 对象，用来存储实际传递的参数。但是箭头函数并没有此对象。</p>
+<p>6、其他区别：箭头函数不具有 prototype 原型对象。箭头函数不具有 super。</p>
+<p>箭头函数不具有 new.target</p>
+<h2 id="vue-实现-tab-组件，使用双向数据绑定"><a href="#vue-实现-tab-组件，使用双向数据绑定" class="headerlink" title="vue 实现 tab 组件，使用双向数据绑定"></a>vue 实现 tab 组件，使用双向数据绑定</h2><p>父组件</p>
+<pre class=" language-vue"><code class="language-vue"><template>
+  <my-tab v-model="activeValue" :tabList="tabList" @onTabChange="changeTab">
+  </my-tab>
+</template>
+
+<script>
+export default {
+  name: "fatherTab",
+  data() {
+    return {
+      tabList: [
+        { label: "标签1", value: 1 },
+        { label: "标签2", value: 2 },
+        { label: "标签3", value: 3 },
+      ],
+      activeValue: 1,
+    };
+  },
+  methods: {
+    changeTab(data) {
+      console.log("object :>> ", data);
+    },
+  },
+};
+</script></code></pre>
+<p>子组件</p>
+<pre class=" language-vue"><code class="language-vue"><template>
+  <div class="box">
+    <div class="active">
+      <div
+        class="activeBox"
+        v-for="(item, index) in tabList"
+        :key="item.value"
+        @click="selectedTab(index)"
+      >
+        <div class="text">
+          {{ item.label }}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "MyTabs",
+  props: [value, tabList],
+  data() {
+    return {
+      activeValue: this.value,
+    };
+  },
+  watch: {
+    value: {
+      handler(val) {
+        deep: true;
+        this.activeValue = val.value;
+      },
+    },
+  },
+  computed: {
+    currentIndex() {
+      return this.tabList.findIndex((item) => item.value == this.value);
+    },
+  },
+  methods: {
+    selectedTab(i) {
+      console.log("子组件单击了");
+      this.$emit("onTabChange", this.tabList[i]);
+    },
+  },
+};
+</script>
+<style></style></code></pre>
+<p>写一个函数，用于比较两个对象是否相等</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">isObjectEqual</span><span class="token punctuation">(</span>obj1<span class="token punctuation">,</span> obj2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> obj1Keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [ 'a', 'b' ]</span>
+  <span class="token keyword">const</span> obj2Keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [ 'a', 'b' ]</span>
+
+  <span class="token comment" spellcheck="true">//判断对象key个数是否相等</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>obj1Keys<span class="token punctuation">.</span>length <span class="token operator">!==</span> obj2Keys<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">//遍历对象的value值</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">of</span> obj1Keys<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// key:遍历数组的value值</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>obj1<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">!==</span> obj2<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token string">"hello"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token string">"world"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> obj3 <span class="token operator">=</span> <span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token string">"hello"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isObjectEqual</span><span class="token punctuation">(</span>obj1<span class="token punctuation">,</span> obj2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
+<span class="token comment" spellcheck="true">//   console.log(isObjectEqual(obj1, obj3)); // true</span></code></pre>
+<h2 id="es6-与-commonjs-的区别"><a href="#es6-与-commonjs-的区别" class="headerlink" title="es6 与 commonjs 的区别"></a>es6 与 commonjs 的区别</h2><p>1.区别：<br>1、CommonJS 输出的是一个值的拷贝，ES6 输出的是值的引用；</p>
+<p>2、CommonJS 是运行时加载，ES6 是编译时输出接口；</p>
+<p>3、CommonJS 的 require 是同步加载模块，ES6 的 import 是异步加载，有独立模块依赖的解析阶段。</p>
+<h2 id="JSON-parse-JSON-stringify-obj-深拷贝的问题"><a href="#JSON-parse-JSON-stringify-obj-深拷贝的问题" class="headerlink" title="JSON.parse(JSON.stringify(obj))深拷贝的问题"></a>JSON.parse(JSON.stringify(obj))深拷贝的问题</h2><p>1、如果 obj 里面存在时间对象,JSON.parse(JSON.stringify(obj))之后，时间对象变成了字符串。</p>
+<p>2、如果 obj 里有 RegExp、Error 对象，则序列化的结果将只得到空对象。</p>
+<p>3、如果 obj 里有函数，undefined，则序列化的结果会把函数， undefined 丢失。</p>
+<p>4、如果 obj 里有 NaN、Infinity 和-Infinity，则序列化的结果会变成 null。</p>
+<p>5、JSON.stringify()只能序列化对象的可枚举的自有属性。如果 obj 中的对象是有构造函数生成的， 则使用 JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的 constructor。</p>
+<p>6、如果对象中存在循环引用的情况也无法正确实现深拷贝。</p>
+<pre class=" language-js"><code class="language-js">
+<span class="token keyword">const</span> obj<span class="token operator">=</span><span class="token punctuation">{</span>
+    age <span class="token punctuation">:</span> <span class="token number">NaN</span><span class="token punctuation">,</span>
+  name<span class="token punctuation">:</span><span class="token string">"88"</span><span class="token punctuation">,</span>
+  isbol<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>
+  Reg<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">'\\w+'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  err<span class="token punctuation">:</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  ubd<span class="token punctuation">:</span>undefined<span class="token punctuation">,</span>
+  isDate<span class="token punctuation">:</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  fun <span class="token punctuation">:</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token string">'object :>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token keyword">let</span> newObj<span class="token operator">=</span>JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'newObj :>> '</span><span class="token punctuation">,</span> newObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+newObj <span class="token punctuation">:</span><span class="token operator">></span><span class="token operator">></span>  <span class="token punctuation">{</span>
+  age<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//有 NaN、Infinity 和-Infinity，则序列化的结果会变成 null。</span>
+  name<span class="token punctuation">:</span> <span class="token string">'88'</span><span class="token punctuation">,</span>
+  isbol<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  Reg<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//有 RegExp、Error 对象，则序列化的结果将只得到空对象。</span>
+  err<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//有 RegExp、Error 对象，则序列化的结果将只得到空对象。</span>
+  isDate<span class="token punctuation">:</span> <span class="token string">'2023-07-25T23:46:27.476Z'</span> <span class="token comment" spellcheck="true">//存在时间对象,JSON.parse(JSON.stringify(obj))之后，时间对象变成了字符串。</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="为什么-Hooks-不能写在条件语句或循环语句中？-为了保证执行顺序一致性"><a href="#为什么-Hooks-不能写在条件语句或循环语句中？-为了保证执行顺序一致性" class="headerlink" title="为什么 Hooks 不能写在条件语句或循环语句中？ (为了保证执行顺序一致性)"></a>为什么 Hooks 不能写在条件语句或循环语句中？ (为了保证执行顺序一致性)</h2><p>因为 React 需要保证在每次组件渲染时，Hooks 的执行顺序都是一致的。如果将 Hooks 写在循环或条件语句中，那么每次渲染时，Hooks 的执行顺序都可能会发生变化。例如，当循环重新运行时，React 将无法确定哪个 Hook 应该先运行，哪个应该后运行。这样会导致组件状态发生不可预测的变化，从而影响组件的正确性。为了解决这个问题，React 强制要求我们在函数的顶部使用 Hooks。这样可以确保每次渲染时 Hooks 的执行顺序是一致的，从而保证组件状态能够正确地更新。</p>
+<h2 id="React-Hooks-——-useMemo-amp-useCallback-区别"><a href="#React-Hooks-——-useMemo-amp-useCallback-区别" class="headerlink" title="React Hooks —— useMemo&amp;useCallback 区别"></a>React Hooks —— useMemo&amp;useCallback 区别</h2><p>相同点：useMemo 和 useCallback——用于优化性能的 Hook 函数</p>
+<p>不同点：useMemo 缓存数据——类似 vue 的计算属性 ，useCallback 缓存函数引用</p>
+<p>推荐 useMemo，useCallback 不要乱用<br>因为并不是所有组件内部的函数都拿起包起来处理回归，虽然减少了堆内存的开辟，但是 useCallback 本身也有自己的处理逻辑和缓存的机制，这个也消耗时间，而 useMemo 对性能的提升很明显<br>所以 useMemo 能用则用，useCallback 能不用则不用，就算用了也不一定有好的效果</p>
+<h2 id="跨域是存在于浏览器端还是服务器端？"><a href="#跨域是存在于浏览器端还是服务器端？" class="headerlink" title="跨域是存在于浏览器端还是服务器端？"></a>跨域是存在于浏览器端还是服务器端？</h2><p>跨域主要是浏览器行为，是客户端行为，浏览器根据策略，判断是否是跨域。服务器端，是没有跨域这种说法的，其次因为浏览器使用门槛非常低，为了防止别有用心的人攻击普通用户，所以引入跨域策略。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">BiLiang</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://liang996.github.io/2023/07306554.html">https://liang996.github.io/2023/07306554.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">BiLiang</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">前端面试</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/zfb.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wx.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'S5uu9gqhvWl4fg9VoCfbKr8G-gzGzoHsz',
+        appKey: 'atYzx2bcExbhB3c4FFxnoI1Y',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '快来评论一下哟～～'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/07306554.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="2023年面试总结">
+                        
+                        <span class="card-title">2023年面试总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            这个是之前个人面试被问到的问题，我这边记录下来
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" class="post-category">
+                                    前端面试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">前端面试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/120546254.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="forEach 如何跳出本次循环和终止循环">
+                        
+                        <span class="card-title">forEach 如何跳出本次循环和终止循环</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            上一篇文章说到循环，那么补一下知识：JS 中 forEach 如何跳出本次循环和终止循环,而有时候需要在 foreach 中跳出循环，该怎么做呢？
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+                            <footer class="page-footer bg-color">
+    
+    <div class="container row center-align"
+        style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">BiLiang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/liang996" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">153.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/liang996" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:445143561@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=445143561" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 445143561" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+                                <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+                                    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+                                        <script src="/js/cursor.js"></script>
+                                        <script src="/js/click_show_text.js"></script>
+
+
+                                        <script
+                                            src="/libs/materialize/materialize.min.js"></script>
+                                        <script
+                                            src="/libs/masonry/masonry.pkgd.min.js"></script>
+                                        <script
+                                            src="/libs/aos/aos.js"></script>
+                                        <script
+                                            src="/libs/scrollprogress/scrollProgress.min.js"></script>
+                                        <script
+                                            src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+                                        <script
+                                            src="/js/matery.js"></script>
+
+                                        <script type="text/javascript">
+                                            //只在桌面版网页启用特效
+                                            var windowWidth = $(window).width();
+                                            if (windowWidth > 768) {
+                                                document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+                                            }
+                                        </script>
+                                        <script type="text/javascript">
+                                            var OriginTitile = document.title, st;
+                                            document.addEventListener("visibilitychange", function () {
+                                                document.hidden ? (document.title = "喔呦，网页崩溃啦", clearTimeout(st)) : (document.title = "小主人回来拉！", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+                                            })
+                                        </script>
+                                        <!-- Baidu Analytics -->
+
+                                            <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+                                                
+                                                    <script
+                                                        src="/libs/others/clicklove.js"
+                                                        async="async"></script>
+                                                    
+                                                        
+                                                            <script async
+                                                                src="/libs/others/busuanzi.pure.mini.js"></script>
+                                                            
+
+                                                                
+
+                                                                        
+
+                                                                                
+                                                                                    <script type="text/javascript"
+                                                                                        color="0,0,255"
+                                                                                        pointColor="0,0,255"
+                                                                                        opacity='0.7'
+                                                                                        zIndex="-1"
+                                                                                        count="99"
+                                                                                        src="/libs/background/canvas-nest.js"></script>
+                                                                                    
+
+                                                                                        
+                                                                                            
+                                                                                                <script
+                                                                                                    type="text/javascript"
+                                                                                                    size="150"
+                                                                                                    alpha='0.6'
+                                                                                                    zIndex="-1"
+                                                                                                    src="/libs/background/ribbon.min.js"
+                                                                                                    async="async"></script>
+                                                                                                
+
+                                                                                                    
+                                                                                                        <script
+                                                                                                            type="text/javascript"
+                                                                                                            src="/libs/background/ribbon-dynamic.js"
+                                                                                                            async="async"></script>
+                                                                                                        
+
+                                                                                                            
+                                                                                                                <script
+                                                                                                                    src="/libs/instantpage/instantpage.js"
+                                                                                                                    type="module"></script>
+                                                                                                                
+
+                                                                                                                    <div
+                                                                                                                        id="weather-v2-plugin-simple">
+                                                                                                                    </div>
+                                                                                                                    <script>
+                                                                                                                        WIDGET = {
+                                                                                                                            CONFIG: {
+                                                                                                                                "modules": "01234",
+                                                                                                                                "background": 1,
+                                                                                                                                "tmpColor": "FFFFFF",
+                                                                                                                                "tmpSize": 16,
+                                                                                                                                "cityColor": "FFFFFF",
+                                                                                                                                "citySize": 16,
+                                                                                                                                "aqiSize": 16,
+                                                                                                                                "weatherIconSize": 24,
+                                                                                                                                "alertIconSize": 18,
+                                                                                                                                "padding": "10px 10px 10px 10px",
+                                                                                                                                "shadow": "1",
+                                                                                                                                "language": "auto",
+                                                                                                                                "borderRadius": 5,
+                                                                                                                                "fixed": "false",
+                                                                                                                                "vertical": "middle",
+                                                                                                                                "horizontal": "center",
+                                                                                                                                "key": "cT3BGIaCRd"
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    </script>
+                                                                                                                    <script
+                                                                                                                        src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>
+                                                                                                                    <script
+                                                                                                                        src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+
+                                                                                                                    <script
+                                                                                                                        type="text/javascript"
+                                                                                                                        color="0,0,255"
+                                                                                                                        opacity='0.7'
+                                                                                                                        zIndex="-2"
+                                                                                                                        count="99"
+                                                                                                                        src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+                </body>
+
+</html>

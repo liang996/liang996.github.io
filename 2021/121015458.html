@@ -1,0 +1,1640 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="个人面试记录一, HTML,CSS,JavaScript,React,node">
+    <meta name="description" content="专注于Web知识积累，热爱于每一份生活耕耘">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>个人面试记录一 | 灯@塔</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="灯@塔" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+    
+
+                <body>
+                    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">灯@塔</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/gallery" class="waves-effect waves-light">
+      
+      <span>我的相册</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+  <div class="mobile-head bg-color">
+    
+    <img src="/medias/logo.png" class="logo-img circle responsive-img">
+    
+    <div class="logo-name">灯@塔</div>
+    <div class="logo-desc">
+      
+      专注于Web知识积累，热爱于每一份生活耕耘
+      
+    </div>
+  </div>
+
+  
+
+  <ul class="menu-list mobile-menu-list">
+    
+    <li class="m-nav-item">
+      
+      <a href="/" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-home"></i>
+        
+        首页
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/tags" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-tags"></i>
+        
+        标签
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/categories" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-bookmark"></i>
+        
+        分类
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/archives" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-archive"></i>
+        
+        归档
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/about" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-user-circle"></i>
+        
+        关于
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/contact" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-comments"></i>
+        
+        留言板
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/friends" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-address-book"></i>
+        
+        友情链接
+      </a>
+      
+        </li>
+        
+    <li class="m-nav-item">
+      
+      <a href="/gallery" class="waves-effect waves-light">
+        
+        <i class="fas fa-fw fa-link"></i>
+        
+        我的相册
+      </a>
+      
+        </li>
+        
+        
+        <li><div class=" divider">
+</div>
+</li>
+<li>
+  <a href="https://github.com/liang996" class="waves-effect waves-light" target="_blank">
+    <i class="fab fa-github-square fa-fw"></i>Fork Me
+  </a>
+</li>
+
+</ul>
+</div>
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/liang996" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+                        
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">个人面试记录一</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">前端面试</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" class="post-category">
+                                前端面试
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-12-10
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-02-10
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    9 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="简介篇"><a href="#简介篇" class="headerlink" title="简介篇"></a>简介篇</h2><p>自我简介:<br>面试官您好，我叫 xx，来自于 xx，目前在 it 行业已有 4 年经验，其中后端经验 1 年，前端经验 3 年，在项目中担任项目组长一职，&nbsp; 其职责主要有 2，其一是承担项目的开发任务，按计划分配小组任务目标，其次就是培养新人达到胜任工作水平；在此期间主要主导过 4 个项目，分别是星福生活管理平台兼星福生活 H5 开发，每车 U 货司机货主端 app 及管理平台，wms 仓库管理系统，及叽喳智慧社区,并带领团队参与过小程序的开发，看了一下贵公司这边的技术选型，很符合我这边的技术发展方向，希望能够得到这次工作机会，谢谢。</p>
+<h2 id="一、Es6-新特性"><a href="#一、Es6-新特性" class="headerlink" title="一、Es6 新特性"></a>一、Es6 新特性</h2><ul>
+<li><p>1.let:块级作用域</p>
+</li>
+<li><p>2.const:常量</p>
+</li>
+<li><p>3，箭头函数</p>
+</li>
+<li><p>4.模板字符串</p>
+</li>
+</ul>
+<h2 id="二、-promise-作用"><a href="#二、-promise-作用" class="headerlink" title="二、 promise 作用"></a>二、 promise 作用</h2><p>promise：解决回调地狱问题，可用于异步处理（then, catch）</p>
+<h2 id="三、-常见数组方法"><a href="#三、-常见数组方法" class="headerlink" title="三、 常见数组方法"></a>三、 常见数组方法</h2><p>for in ,for of ,forEach,map,filter,find 等等</p>
+<h2 id="四、-什么是闭包，闭包的负面影响"><a href="#四、-什么是闭包，闭包的负面影响" class="headerlink" title="四、 什么是闭包，闭包的负面影响"></a>四、 什么是闭包，闭包的负面影响</h2><p>闭包：内部函数能够访问到外部函数的局部变量，优点其一，存在私有化空间，避免了全局变量的污染，其二，持久化内存，缺点就是由于闭包会持久化内存，闭包过度使用，会造成内存泄漏</p>
+<h2 id="五、-什么是跨域？什么是不跨域？"><a href="#五、-什么是跨域？什么是不跨域？" class="headerlink" title="五、 什么是跨域？什么是不跨域？"></a>五、 什么是跨域？什么是不跨域？</h2><p>一句话：同一个 ip、同一个网络协议、同一个端口，三者都满足就是同一个域，否则就是跨域问题了。而为什么开发者最初不直接定为一切可跨域的呢？默认的为什么都是不可跨域呢？这就涉及到了同源策略，为了系统的安全，由 Netscape 提出一个著名的安全策略。现在所有支持 JavaScript 的浏览器都会使用这个策略。</p>
+<p>所谓同源是，域名，协议，端口相同。当我们在浏览器中打开百度和谷歌两个网站时，百度浏览器在执行一个脚本的</p>
+<p>时候会检查这个脚本属于哪个页面的，即检查是否同源，只有和百度同源的脚本才会被执行，如果没有同源策略，那</p>
+<p>随便的向百度中注入一个 js 脚本，弹个恶意广告，通过 js 窃取信息，这就很不安全了</p>
+<h2 id="六、-跨域解决方法"><a href="#六、-跨域解决方法" class="headerlink" title="六、 跨域解决方法"></a>六、 跨域解决方法</h2><ul>
+<li><p>使用 jsonp:用于实现跨域问题</p>
+</li>
+<li><p>代理</p>
+</li>
+<li><p>cors</p>
+</li>
+</ul>
+<h2 id="七、get-和-post-区别"><a href="#七、get-和-post-区别" class="headerlink" title="七、get 和 post 区别"></a>七、get 和 post 区别</h2><p>（1）、安全性不同：get 安全性低，数据会出现 url 中，post 的所有操作对用户来说都是不可见的。</p>
+<p>（2）、编码方式不同:，get 只能对 url 编码，而 post 支持多种编码方式</p>
+<p>（3）、传输大小不同：Get 传送的数据量较小，这主要是因为受 URL 长度限制；Post 传送的数据量较大，一般被默认为不受限制。</p>
+<p>（4）、执行效率不同：Get 执行效率却比 Post 方法好。Get 是 form 提交的默认方法。</p>
+<h2 id="八、网页性能优化方案"><a href="#八、网页性能优化方案" class="headerlink" title="八、网页性能优化方案"></a>八、网页性能优化方案</h2><p>（1）代码优化</p>
+<ul>
+<li><p>a:js 代码模块化，公共方法提取</p>
+</li>
+<li><p>b:script 标签尽可能写在 body 下面</p>
+</li>
+</ul>
+<p>（2）：http 请求优化</p>
+<p>尽可能减少 http 重复请求次数</p>
+<h2 id="九、什么是-Typescript"><a href="#九、什么是-Typescript" class="headerlink" title="九、什么是 Typescript"></a>九、什么是 Typescript</h2><p>Typescript 是 JavaScript 的超集， 是一种面向对象编程语言,强类型语言，你可以明确知道数据的类型。代码可读性极强</p>
+<h2 id="十、react-介绍"><a href="#十、react-介绍" class="headerlink" title="十、react 介绍"></a>十、react 介绍</h2><ul>
+<li><p>是什么：是构建用户界面的 js 库<br>优点：组件化编码，声明式开发，虚拟 Dom 及优秀的 diff 算法</p>
+</li>
+<li><p>jsx:类似 xml 的 js 扩展语法，是原始创建虚拟 Dom 的语法糖</p>
+</li>
+<li><p>key 作用;主要是判断两个节点是否相同，相同就复用，不同就删除创建新节点</p>
+</li>
+</ul>
+<h2 id="十一、React-生命周期的三个大阶段"><a href="#十一、React-生命周期的三个大阶段" class="headerlink" title="十一、React 生命周期的三个大阶段"></a>十一、React 生命周期的三个大阶段</h2><ul>
+<li><p>1.Mounting: 挂载阶段。(已插入真实 DOM)</p>
+</li>
+<li><p>2.Updation: 更新阶段。(正在被重新渲染)</p>
+</li>
+<li><p>3.Unmounting: 销毁阶段(已移出真实 DOM)</p>
+</li>
+</ul>
+<h2 id="十一、React-生命周期新旧生命周期-补充"><a href="#十一、React-生命周期新旧生命周期-补充" class="headerlink" title="十一、React 生命周期新旧生命周期(补充)"></a>十一、React 生命周期新旧生命周期(补充)</h2><h4 id="旧："><a href="#旧：" class="headerlink" title="旧："></a>旧：</h4><ol>
+<li>初始化阶段: 由 ReactDOM.render()触发—初次渲染</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span>    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">2</span><span class="token punctuation">.</span>    <span class="token function">componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">3</span><span class="token punctuation">.</span>    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">4</span><span class="token punctuation">.</span>    <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span><span class="token operator">==</span><span class="token operator">></span> 常用
+一般在这个钩子中做一些初始化的事，例如：开启定时器、发送网络请求、订阅消息</code></pre>
+<ol start="2">
+<li>更新阶段: 由组件内部 this.setSate()或父组件 render 触发</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span> <span class="token function">componentWillReceiveProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span>              <span class="token comment" spellcheck="true">//子组件将要接收新的props的钩子</span>
+
+<span class="token number">2</span><span class="token punctuation">.</span>    <span class="token function">shouldComponentUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//控制组件更新的“阀门”</span>
+<span class="token number">3</span><span class="token punctuation">.</span>    <span class="token function">componentWillUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">4</span><span class="token punctuation">.</span>    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span><span class="token operator">==</span><span class="token operator">></span> 必须使用的一个
+<span class="token number">5</span><span class="token punctuation">.</span>    <span class="token function">componentDidUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<ol start="3">
+<li>卸载组件: 由 ReactDOM.unmountComponentAtNode()触发</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span>    <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token operator">===</span><span class="token operator">==</span><span class="token operator">></span> 常用
+一般在这个钩子中做一些收尾的事，例如：关闭定时器、取消订阅消息</code></pre>
+<h4 id="新："><a href="#新：" class="headerlink" title="新："></a>新：</h4><ol>
+<li>初始化阶段: 由 ReactDOM.render()触发—初次渲染</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span>    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">2</span><span class="token punctuation">.</span>    <span class="token function">getDerivedStateFromProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">3</span><span class="token punctuation">.</span>    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">4</span><span class="token punctuation">.</span>    <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span><span class="token operator">==</span><span class="token operator">></span> 常用
+一般在这个钩子中做一些初始化的事，例如：开启定时器、发送网络请求、订阅消息</code></pre>
+<ol start="2">
+<li>更新阶段: 由组件内部 this.setSate()或父组件重新 render 触发</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span>    <span class="token function">getDerivedStateFromProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">2</span><span class="token punctuation">.</span>    <span class="token function">shouldComponentUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">3</span><span class="token punctuation">.</span>    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">4</span><span class="token punctuation">.</span>    <span class="token function">getSnapshotBeforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">5</span><span class="token punctuation">.</span>    <span class="token function">componentDidUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<ol start="3">
+<li>卸载组件: 由 ReactDOM.unmountComponentAtNode()触发</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span>    <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token operator">===</span><span class="token operator">==</span><span class="token operator">></span> 常用
+一般在这个钩子中做一些收尾的事，例如：关闭定时器、取消订阅消息</code></pre>
+<h3 id="新的和旧的生命周期来看，去除了-3-个带-will-的钩子，添加了两个钩子"><a href="#新的和旧的生命周期来看，去除了-3-个带-will-的钩子，添加了两个钩子" class="headerlink" title="新的和旧的生命周期来看，去除了 3 个带 will 的钩子，添加了两个钩子"></a>新的和旧的生命周期来看，去除了 3 个带 will 的钩子，添加了两个钩子</h3><p>去除了 3 个钩子为</p>
+<pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span>    <span class="token function">componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">2</span><span class="token punctuation">.</span>    <span class="token function">componentWillReceiveProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">3</span><span class="token punctuation">.</span>    <span class="token function">componentWillUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>添加的两个钩子为</p>
+<pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span>    <span class="token function">getDerivedStateFromProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//若state的值在任何时候都取决于props，那么可以使用getDerivedStateFromProps</span>
+<span class="token number">2</span><span class="token punctuation">.</span>    <span class="token function">cgetSnapshotBeforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//在更新之前获取快照</span>
+</code></pre>
+<h2 id="十二、React-常用钩子"><a href="#十二、React-常用钩子" class="headerlink" title="十二、React 常用钩子"></a>十二、React 常用钩子</h2><ul>
+<li><p>数据接收 实现继承 super(props) :constructor</p>
+</li>
+<li><p>渲染组件 和 html 标签：render</p>
+</li>
+<li><p>组件将要挂载时触发的函数：componentWillMount</p>
+</li>
+<li><p>组件挂载完成时触发的函数：componentDidMount</p>
+</li>
+<li><p>是否要更新数据时触发的函数（检测组件内的变化 可以用作页面性能的优化(默认值为 true)）：shouldComponentUpdate</p>
+</li>
+</ul>
+<h2 id="十三、redux"><a href="#十三、redux" class="headerlink" title="十三、redux"></a>十三、redux</h2><ul>
+<li><p>是什么：redux 是一个专门用于状态管理的 js 库（本质就是一个 js 库）</p>
+</li>
+<li><p>作用：集中式状态管理，在 react 中用于多个组件共享状态</p>
+</li>
+<li><p>三个核心：action (动作对象) ，store,<br>reducer</p>
+</li>
+<li><p>流程（白话）：比如要开发一个计算器功能，那么我就定义一个 Count 组件，然后我现在需求要加 2，那么我就把这个需求交给动作对象 action,随后动作对象 action 分发 dispatch,dispatch 就是一个普通对象，包含两个属性，一个 type,一个 data.type 用于标识你要做的事情（这里是“加”），data 是数据属性（这里是“2”），得到这个对象后，随后传递给 store,这个时候 store 需要一个 api 创建，也就是 creatStore(),创建好 store 后，立马传递给 reducer,reducer 是一个纯函数，接受两个参数，一个是之前的状态值，一个是动作对象，reducer 加工后返回一个新的状态值给 store,Count 通过另一个 api,getState()来拿到此时存在 store 的新的状态值</p>
+</li>
+</ul>
+<p>角色理解：Count 就相当于（客人），客人吃饭点菜找 action(服务员)，服务员将客人点菜信息给 store（前台）,前台将点菜信息立马给 reducer（后厨），后厨把加工好的菜给前台，前台报编号，客人来取菜</p>
+<h2 id="十四、hooks-是什么？"><a href="#十四、hooks-是什么？" class="headerlink" title="十四、hooks 是什么？"></a>十四、hooks 是什么？</h2><p>简单介绍下什么是 hooks，hooks 产生的背景？hooks 的优点？<br>hooks 是针对在使用 react 时存在以下问题而产生的：</p>
+<p>组件之间复用状态逻辑很难，在 hooks 之前，实现组件复用，一般采用高阶组件和 Render Props，它们本质是将复用逻辑提升到父组件中，很容易产生很多包装组件，带来嵌套地域。<br>组件逻辑变得越来越复杂，尤其是生命周期函数中常常包含一些不相关的逻辑，完全不相关的代码却在同一个方法中组合在一起。如此很容易产生 bug，并且导致逻辑不一致。<br>复杂的 class 组件，使用 class 组件，需要理解 JavaScript 中 this 的工作方式，不能忘记绑定事件处理器等操作，代码复杂且冗余。除此之外，class 组件也会让一些 react 优化措施失效。<br>针对上面提到的问题，react 团队研发了 hooks，它主要有两方面作用：</p>
+<p>用于在函数组件中引入状态管理和生命周期方法<br>取代高阶组件和 render props 来实现抽象和可重用性<br>优点也很明显：</p>
+<p>避免在被广泛使用的函数组件在后期迭代过程中，需要承担一些副作用，而必须重构成类组件，它帮助函数组件引入状态管理和生命周期方法。<br>Hooks 出现之后，我们将复用逻辑提取到组件顶层，而不是强行提升到父组件中。这样就能够避免 HOC 和 Render Props 带来的「嵌套地域」<br>避免上面陈述的 class 组件带来的那些问题</p>
+<h2 id="十五、介绍下常用的-hooks？"><a href="#十五、介绍下常用的-hooks？" class="headerlink" title="十五、介绍下常用的 hooks？"></a>十五、介绍下常用的 hooks？</h2><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 我们实现一个简易版的useState</span>
+<span class="token keyword">let</span> memoizedStates <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 多个useState 时需要使用数组来存</span>
+<span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span>initialState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  memoizedStates<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> memoizedStates<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">||</span> initialState<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> currentIndex <span class="token operator">=</span> index<span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">setState</span><span class="token punctuation">(</span>newState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    memoizedStates<span class="token punctuation">[</span>currentIndex<span class="token punctuation">]</span> <span class="token operator">=</span> newState<span class="token punctuation">;</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>memoizedStates<span class="token punctuation">[</span>index<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li><p>useState()，状态钩子。为函数组建提供内部状态</p>
+</li>
+<li><p>useContext()，共享钩子。该钩子的作用是，在组件之间共享状态。 可以解决 react 逐层通过 Porps 传递数据，它接受 React.</p>
+</li>
+<li><p>createContext()的返回结果作为参数，使用 useContext 将不再需要 Provider 和 Consumer。</p>
+</li>
+<li><p>useReducer()，Action 钩子。useReducer() 提供了状态管理，其基本原理是通过用户在页面中发起 action, 从而通过 reducer 方法来改变 state, 从而实现页面和状态的通信。使用很像 redux</p>
+</li>
+<li><p>useEffect()，副作用钩子。它接收两个参数， 第一个是进行的异步操作， 第二个是数组，用来给出 Effect 的依赖项</p>
+</li>
+<li><p>useRef()，获取组件的实例；渲染周期之间共享数据的存储(state 不能存储跨渲染周期的数据，因为 state 的保存会触发组件重渲染）<br>useRef 传入一个参数 initValue，并创建一个对象{ current: initValue }给函数组件使用，在整个生命周期中该对象保持不变。</p>
+</li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">BiLiang</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://liang996.github.io/2021/121015458.html">https://liang996.github.io/2021/121015458.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">BiLiang</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">前端面试</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/zfb.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wx.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'S5uu9gqhvWl4fg9VoCfbKr8G-gzGzoHsz',
+        appKey: 'atYzx2bcExbhB3c4FFxnoI1Y',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '快来评论一下哟～～'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/121522883.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="个人面试记录二">
+                        
+                        <span class="card-title">个人面试记录二</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            这个是之前个人面试被问到的问题，我这边记录下来
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" class="post-category">
+                                    前端面试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">前端面试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12081233.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="react受控组件和非受控组件">
+                        
+                        <span class="card-title">react受控组件和非受控组件</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            react受控组件和非受控组件总结
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/react/" class="post-category">
+                                    react
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/react/">
+                        <span class="chip bg-color">react</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+                            <footer class="page-footer bg-color">
+    
+    <div class="container row center-align"
+        style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">BiLiang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/liang996" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">153.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/liang996" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:445143561@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=445143561" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 445143561" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+                                <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+                                    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+                                        <script src="/js/cursor.js"></script>
+                                        <script src="/js/click_show_text.js"></script>
+
+
+                                        <script
+                                            src="/libs/materialize/materialize.min.js"></script>
+                                        <script
+                                            src="/libs/masonry/masonry.pkgd.min.js"></script>
+                                        <script
+                                            src="/libs/aos/aos.js"></script>
+                                        <script
+                                            src="/libs/scrollprogress/scrollProgress.min.js"></script>
+                                        <script
+                                            src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+                                        <script
+                                            src="/js/matery.js"></script>
+
+                                        <script type="text/javascript">
+                                            //只在桌面版网页启用特效
+                                            var windowWidth = $(window).width();
+                                            if (windowWidth > 768) {
+                                                document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+                                            }
+                                        </script>
+                                        <script type="text/javascript">
+                                            var OriginTitile = document.title, st;
+                                            document.addEventListener("visibilitychange", function () {
+                                                document.hidden ? (document.title = "喔呦，网页崩溃啦", clearTimeout(st)) : (document.title = "小主人回来拉！", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+                                            })
+                                        </script>
+                                        <!-- Baidu Analytics -->
+
+                                            <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+                                                
+                                                    <script
+                                                        src="/libs/others/clicklove.js"
+                                                        async="async"></script>
+                                                    
+                                                        
+                                                            <script async
+                                                                src="/libs/others/busuanzi.pure.mini.js"></script>
+                                                            
+
+                                                                
+
+                                                                        
+
+                                                                                
+                                                                                    <script type="text/javascript"
+                                                                                        color="0,0,255"
+                                                                                        pointColor="0,0,255"
+                                                                                        opacity='0.7'
+                                                                                        zIndex="-1"
+                                                                                        count="99"
+                                                                                        src="/libs/background/canvas-nest.js"></script>
+                                                                                    
+
+                                                                                        
+                                                                                            
+                                                                                                <script
+                                                                                                    type="text/javascript"
+                                                                                                    size="150"
+                                                                                                    alpha='0.6'
+                                                                                                    zIndex="-1"
+                                                                                                    src="/libs/background/ribbon.min.js"
+                                                                                                    async="async"></script>
+                                                                                                
+
+                                                                                                    
+                                                                                                        <script
+                                                                                                            type="text/javascript"
+                                                                                                            src="/libs/background/ribbon-dynamic.js"
+                                                                                                            async="async"></script>
+                                                                                                        
+
+                                                                                                            
+                                                                                                                <script
+                                                                                                                    src="/libs/instantpage/instantpage.js"
+                                                                                                                    type="module"></script>
+                                                                                                                
+
+                                                                                                                    <div
+                                                                                                                        id="weather-v2-plugin-simple">
+                                                                                                                    </div>
+                                                                                                                    <script>
+                                                                                                                        WIDGET = {
+                                                                                                                            CONFIG: {
+                                                                                                                                "modules": "01234",
+                                                                                                                                "background": 1,
+                                                                                                                                "tmpColor": "FFFFFF",
+                                                                                                                                "tmpSize": 16,
+                                                                                                                                "cityColor": "FFFFFF",
+                                                                                                                                "citySize": 16,
+                                                                                                                                "aqiSize": 16,
+                                                                                                                                "weatherIconSize": 24,
+                                                                                                                                "alertIconSize": 18,
+                                                                                                                                "padding": "10px 10px 10px 10px",
+                                                                                                                                "shadow": "1",
+                                                                                                                                "language": "auto",
+                                                                                                                                "borderRadius": 5,
+                                                                                                                                "fixed": "false",
+                                                                                                                                "vertical": "middle",
+                                                                                                                                "horizontal": "center",
+                                                                                                                                "key": "cT3BGIaCRd"
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    </script>
+                                                                                                                    <script
+                                                                                                                        src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>
+                                                                                                                    <script
+                                                                                                                        src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+
+                                                                                                                    <script
+                                                                                                                        type="text/javascript"
+                                                                                                                        color="0,0,255"
+                                                                                                                        opacity='0.7'
+                                                                                                                        zIndex="-2"
+                                                                                                                        count="99"
+                                                                                                                        src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+                </body>
+
+</html>
